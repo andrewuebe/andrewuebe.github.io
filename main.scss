@@ -1,0 +1,195 @@
+$crystalH: 60vh;
+$crystalW: $crystalH / 4;
+$color: rgb(177,218,128) rgb(255,241,123) rgb(90,184,253) rgb(255,92,80);
+$t: transparent;
+$tBorderW: $crystalW/2;
+$sideH: $crystalW*2;
+$sideAngle: 75.5deg;
+$crystalXangle: 75deg;
+$dur: 4s;
+
+body {
+  background: white;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 800px;
+}
+.container {
+  position: relative;
+  height: $crystalH;
+  width: $crystalH;
+  animation: float $dur/2 linear infinite alternate;
+}
+.glow {
+  background: radial-gradient(#fff, #fff 50%, #61dbdd 60%, transparent 70%);
+  border: {
+  radius: 50%;
+  }
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.25,1.25);
+}
+.crystal, .gradients {
+  position: absolute;
+  top: $crystalW*1.5;
+  left: $crystalH/2 - $crystalW/2;
+  height: $crystalW;
+  width: $crystalW;
+  transform: rotateX($crystalXangle) rotateZ(45deg) {
+    style: preserve-3d;
+  }
+}
+.crystal {
+  animation: spin $dur linear infinite;
+}
+.side {
+  border: 0 solid transparent;
+  opacity: 0.7;
+  position: absolute;
+  .blur {
+    position: absolute;
+    height: $sideH;
+    width: $crystalW;
+  }
+}
+
+// top, right, bottom, and left refer to the borders,
+// so 1 is the top part of the crystal, and 2 is the bottom part
+.top1, .top2 {
+  transform: {
+    origin: 50% 0;
+  }
+}
+.top1 {
+  border: {
+    color: nth($color,1) $t $t $t;
+    width: $sideH $tBorderW $tBorderW $tBorderW;
+  }
+  transform: rotateX($sideAngle);
+  .blur {
+    background: linear-gradient(nth($color,3), transparent 3%);
+    top: -$sideH;
+    left: -$crystalW/2;
+  }
+}
+.top2 {
+  border: {
+    color: nth($color,3) $t $t $t;
+    width: $sideH $tBorderW $tBorderW $tBorderW;
+  }
+  transform: rotateX(-$sideAngle);
+}
+.right1, .right2 {
+  transform: {
+    origin: 100% 0;
+  }
+}
+.right1 {
+  border: {
+    color: $t nth($color,2) $t $t;
+    width: $tBorderW $sideH $tBorderW $tBorderW;
+  }
+  left: -$tBorderW*3;
+  transform: rotateY($sideAngle);
+  .blur {
+    background: linear-gradient(90deg, transparent 97%, nth($color,4));
+    top: -$crystalW/2;
+    left: 0;
+    height: $crystalW;
+    width: $sideH;
+  }
+}
+.right2 {
+  border: {
+    color: $t nth($color,4) $t $t;
+    width: $tBorderW $sideH $tBorderW $tBorderW;
+  }
+  left: -$tBorderW*3;
+  transform: rotateY(-$sideAngle);
+}
+.bottom1, .bottom2 {
+  bottom: 0;
+  transform: {
+    origin: 0 100%;
+  }
+}
+.bottom1 {
+  border: {
+    color: $t $t nth($color,1) $t;
+    width: $tBorderW $tBorderW $sideH $tBorderW;
+  }
+  transform: rotateX(-$sideAngle);
+  .blur {
+    background: linear-gradient(transparent 97%, nth($color,3));
+    top: 0;
+    left: -$crystalW/2;
+  }
+}
+.bottom2 {
+  border: {
+    color: $t $t nth($color,3) $t;
+    width: $tBorderW $tBorderW $sideH $tBorderW;
+  }
+  transform: rotateX($sideAngle);
+}
+.left1, .left2 {
+  transform: {
+    origin: 0 0;
+  }
+}
+.left1 {
+  border: {
+    color: $t $t $t nth($color,2);
+    width: $tBorderW $tBorderW $tBorderW $sideH;
+  }
+  transform: rotateY(-$sideAngle);
+  .blur {
+    background: linear-gradient(90deg, nth($color,4), transparent 3%);
+    top: -$crystalW/2;
+    left: -$sideH;
+    height: $crystalW;
+    width: $sideH;
+  }
+}
+.left2 {
+  border: {
+    color: $t $t $t nth($color,4);
+    width: $tBorderW $tBorderW $tBorderW $sideH;
+  }
+  transform: rotateY($sideAngle);  
+}
+.gradients > div {
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: $sideH;
+  width: $crystalW;
+  transform: {
+    origin: 0 100%;
+  }
+}
+.gradient1 {
+  background-image: radial-gradient(50% 100% at 15% 55%, #fff 15%, transparent 25%), radial-gradient(100% 100% at 43% 63%, #fff 6%, transparent 13%);
+  transform: rotateX(-75.5deg) rotateZ(15deg);
+}
+.gradient2 {
+  background-image: radial-gradient(20% 100% at 10% 60%, #fff, transparent 30%);
+  transform: rotateX(75.5deg) rotateZ(15deg);
+}
+
+@keyframes float {
+  from {transform: translateY($crystalH/40);}
+  to {transform: translateY(-$crystalH/40);}
+}
+@keyframes spin {
+  from {transform: rotateX($crystalXangle) rotateZ(0deg);}
+  to {transform: rotateX($crystalXangle) rotateZ(1turn);}
+}
