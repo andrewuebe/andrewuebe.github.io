@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
 body {
   background: white;
   display: flex;
@@ -24,6 +26,11 @@ body {
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
     animation-duration: 4s;
+}
+
+.menu {
+  font-size:20px;
+  font-family: "PT Sans", sans-serif;
 }
 
 .glow {
