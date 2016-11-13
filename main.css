@@ -29,8 +29,9 @@ body {
 }
 
 .menu {
-  font-size:20px;
+  font-size:60px;
   font-family: "PT Sans", sans-serif;
+  text-align: center;
 }
 
 .glow {
