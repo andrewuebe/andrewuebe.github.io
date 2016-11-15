@@ -245,8 +245,6 @@ body {
     font-family: "Old Standard TT";
     font-style: italic;
     display: block; /* Display block instead of inline */
-    width: 300px;
-    margin: 0 auto;
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
@@ -258,8 +256,6 @@ body {
     font-family: "Old Standard TT";
     font-style: italic;
     display: block; /* Display block instead of inline */
-    width: 300px;
-    margin: 0 auto;
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
@@ -363,10 +359,10 @@ body {
 	 }
 	 
 	 .overlay p-top {
-		font-size: 80px;
+		font-size: 60px;
 	 }
 	 
 	 .overlay p-bot {
-		font-size: 80px;
+		font-size: 60px;
 	 }
  }
