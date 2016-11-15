@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
   background: white;
   display: flex;
@@ -14,8 +14,14 @@ body {
   -webkit-perspective: 800px;
 }
 
+.myNav{
+	z-index: 999;
+}
+
+
 .container {
   position: relative;
+  z-index: 0;
   height: 60vh;
   width: 60vh;
 /*
@@ -26,12 +32,6 @@ body {
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
     animation-duration: 4s;
-}
-
-.menu {
-  font-size:60px;
-  font-family: "PT Sans", sans-serif;
-  text-align: center;
 }
 
 .glow {
@@ -59,6 +59,7 @@ body {
 .crystal {
   animation: spin 4s linear infinite;
   -webkit-animation: spin 4s linear infinite;
+  -webkit-transform: rotateX(75deg) rotateZ(45deg);
 }
 
 .side {
@@ -198,6 +199,102 @@ body {
   -webkit-transform: rotateX(75.5deg) rotateZ(15deg);
 }
 
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: -999; /* Sit on top */
+    left: 0;
+    top: 0;
+    opacity: 0;
+    animation: colorchange 59s;
+    -webkit-animation: colorchange 59s;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.overlay p {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+    font-family: "Roboto";
+    font-weight: 700;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.overlay p-top {
+    padding: 0px;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    font-family: "Old Standard TT";
+    font-style: italic;
+    display: block; /* Display block instead of inline */
+    width: 300px;
+    margin: 0 auto;
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.overlay p-bot {
+    padding: 0px;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    font-family: "Old Standard TT";
+    font-style: italic;
+    display: block; /* Display block instead of inline */
+    width: 300px;
+    margin: 0 auto;
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
 @keyframes float {
   from {
     transform: translateY(1.5vh);
@@ -235,3 +332,21 @@ body {
     -webkit-transform: rotateX(75deg) rotateZ(1turn);
   }
 }
+
+@keyframes colorchange
+    {
+      0%   {background: #ff5555;}
+      25%  {background: #fff480;}
+      50%  {background: #57b8ff;}
+      75%  {background: #b3da80;}
+      100% {background: #ff5555;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: #ff5555;}
+      25%  {background: #fff480;}
+      50%  {background: #57b8ff;}
+      75%  {background: #b3da80;}
+      100% {background: #ff5555;}
+    }
