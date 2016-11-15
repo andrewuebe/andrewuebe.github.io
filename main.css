@@ -351,6 +351,7 @@ body {
 
  @media screen and (max-device-width: 480px) and (orientation: portrait){
 	.overlay-content {
+		padding: 0px;
 		margin-top: 5px;
 	 }
 	 
