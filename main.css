@@ -361,4 +361,12 @@ body {
 	 .overlay p {
 		font-size: 150px;
 	 }
+	 
+	 .overlay p-top {
+		font-size: 80px;
+	 }
+	 
+	 .overlay p-bot {
+		font-size: 80px;
+	 }
  }
