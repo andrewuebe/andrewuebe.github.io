@@ -354,7 +354,11 @@ body {
     }
 
  @media screen and (max-device-width: 480px) and (orientation: portrait){
-	.overlay p {
+	.overlay-content {
+		margin-top: 5px;
+	 }
+	 
+	 .overlay p {
 		font-size: 130px;
 	 }
  }
