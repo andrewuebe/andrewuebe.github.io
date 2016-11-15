@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
   background: white;
+  margin: 0;
+  padding: 0;
   display: flex;
   display: -webkit-flex;
   justify-content: center;
