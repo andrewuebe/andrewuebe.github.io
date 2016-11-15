@@ -234,6 +234,7 @@ body {
     font-family: "Roboto";
     font-weight: 700;
     width: 632px;
+    margin: 0 auto;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
 }
@@ -349,7 +350,11 @@ body {
       75%  {background: #b3da80;}
       100% {background: #ff5555;}
     }
-
+ @media (max-width: 650px) {
+	 .overlay p {
+		 width: 100%;
+	 }
+}
  @media screen and (max-device-width: 480px) and (orientation: portrait){
 	.overlay-content {
 		top: 10%;
