@@ -16,6 +16,17 @@ body {
   -webkit-perspective: 800px;
 }
 
+.liink {
+	padding: 0px;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    font-family: "Old Standard TT";
+    font-style: italic;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
 .yay {
     max-width: 560px; /* you have to have a size or this method doesn't work */
     max-height: 315px;
