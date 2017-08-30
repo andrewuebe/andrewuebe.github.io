@@ -1,17 +1,7 @@
 @font-face {
 font-family: "Proxima Nova";
 src: 
-url("ProximaNova-Black.otf") format("opentype"),
-url("ProximaNova-Bold.otf") format("opentype"),
-url("ProximaNova-BoldIt.otf") format("opentype"),
-url("ProximaNova-Extrabold.otf") format("opentype"),
-url("ProximaNova-Light.otf") format("opentype"),
-url("ProximaNova-LightItalic.otf") format("opentype"),
-url("ProximaNova-RegItalic.otf") format("opentype"),
-url("ProximaNova-Regular.otf") format("opentype"),
-url("ProximaNova-RegularItalic.otf") format("opentype"),
-url("ProximaNova-Semibold.otf") format("opentype"),
-url("ProximaNova-SemiboldItalic.otf") format("opentype");
+url("ProximaNova-Regular.otf") format("opentype");
 }
 
 html {
