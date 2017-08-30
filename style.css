@@ -1,9 +1,3 @@
-@font-face {
-font-family: "Proxima Nova";
-src: 
-url("ProximaNova-Regular.otf") format("opentype");
-}
-
 html {
 	box-sizing: border-box;
 	display: block;
