@@ -16,7 +16,6 @@ body {
 }
 
 .hero {
-	display: table;
 	width: 100%;
 	z-index: 1000;
 	min-height: 700px;
@@ -27,6 +26,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
 	background-size: cover;
+	color: white;
 }
 
 .hero:before {
@@ -35,6 +35,12 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+}
+
+.biggercontainer {
+	display: table;
+	width: 100%;
+	height: 90%;
 }
 
 @keyframes opacityScale {
@@ -69,6 +75,7 @@ h2 {
 	font-weight: 200;
 	font-size: 11px;
 	letter-spacing: 0.3em;
+	text-align: center;
 }
 
 h2 a{
@@ -162,4 +169,14 @@ logo a {
 
 #navbar li a:hover {
 	color: #fff039;
+}
+
+#downarrow {
+	display: block;
+	text-indent: -9999px;
+	width: 20px;
+	height: 30px;
+	background: url(images/downarrow.svg);
+	background-size: 20px 30px;
+	margin: 0 auto;
 }
