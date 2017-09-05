@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<script src="https://use.typekit.net/lgl0avq.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			body {
+				background: #4A61D1; /* For browsers that do not support gradients */
+				background: -webkit-linear-gradient(left top, #5FC2FF, #4A61D1); /* For Safari 5.1 to 6.0 */
+				background: -o-linear-gradient(bottom right, #5FC2FF, #4A61D1); /* For Opera 11.1 to 12.0 */
+				background: -moz-linear-gradient(bottom right, #5FC2FF, #4A61D1); /* For Firefox 3.6 to 15 */
+				background: linear-gradient(to bottom right, #5FC2FF, #4A61D1); /* Standard syntax */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="navbar">
+			<a href="#" class="logoimg">
+			  MicSearch
+			</a>
+			<logo><a href="#"><l style="color: #fff039;">Mic</l>Search</a></logo><div id="lilguy">BETA</div>
+			<ul>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">FIND A SHOW</a></li>
+				<li><a href="#">ADD A SHOW</a></li>
+			</ul>
+		</div>
+		<div id="searchCentral">
+			<div id="currentCity">Choose a city:</div>
+			<div class="select-style">
+				<select id="myselect" onchange="change_myselect(this.value)">
+				<option value="choose a city:">Choose a city:</option>
+				<option value="chicago">Chicago</option>
+				<option value="new york city">New York City</option>
+				</select>
+			</div>
+			<div id="myTable"></div>
+		</div>
+	  
+	<script src="js/table.json"></script>
+	</body>
+	
+</html>
