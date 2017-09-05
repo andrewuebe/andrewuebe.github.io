@@ -1,0 +1,149 @@
+var cityObj, i, j, x = "";
+cityObj = [
+	{"name": "chicago",
+		"weekday": [
+			{"day": "sunday", 
+				"shows": [
+					{"id": 1,
+					"name": "Funday Sunday",
+					"time": "4:00 PM - 8:00 PM",
+					"location": "Cuzin's",
+					"address": "17704 Oak Park Ave, Tinley Park, IL 60477",
+					"genres": "Blues",
+					"freq": "Weekly",
+					"equipment": [
+						"drum kit", 
+						"mic"
+					],
+					"website": "http://",
+					"host": "Billy King",
+					"signup": "4:00 PM",
+					"under21": "yes"
+					}
+				]
+				
+			},
+			{"day": "saturday",
+				"shows": [
+					{"id": 2,
+					"name": "Funday Saturday",
+					"time": "4:00 PM - 8:00 PM",
+					"location": "Cuzin's",
+					"address": "17704 Oak Park Ave, Tinley Park, IL 60477",
+					"genres": "Blues",
+					"freq": "Weekly",
+					"equipment": [
+						"drum kit", 
+						"mic"
+						],
+					"website": "http://",
+					"host": "Billy King",
+					"signup": "4:00 PM",
+					"under21": "yes"
+					}
+
+				]
+				
+			},
+	
+		]
+	},
+	{"name": "new york city",
+		"weekday": [
+			{"day": "monday", 
+				"shows": [
+					{"id": 3,
+					"name": "THE GREATEST SHOW EVER!!!",
+					"time": "9:00 PM",
+					"location": "Barry's Pad",
+					"address": "929 E. Elm Rd. Brooklyn, NY 11210",
+					"genres": "Comedy",
+					"freq": "Weekly",
+					"equipment": [
+						"drum kit", 
+						"mic"
+					],
+					"website": "http://",
+					"host": "Billy King",
+					"signup": "4:00 PM",
+					"under21": "yes"
+					}
+				]
+				
+			},
+			{"day": "wednesday",
+				"shows": [
+					{"id": 4,
+					"name": "Check THIS show out!!",
+					"time": "10:00 PM",
+					"location": "The Fat Apple Bar and Grille",
+					"address": "4 West School Lane Bronx, NY 10452",
+					"genres": "Blues",
+					"freq": "Weekly",
+					"equipment": [
+						"drum kit", 
+						"mic"
+						],
+					"website": "http://",
+					"host": "Billy King",
+					"signup": "4:00 PM",
+					"under21": "yes"
+					}
+
+				]
+				
+			},
+	
+		]
+}]
+
+function change_myselect(sel) {
+	
+	if (sel == "choose a city:") {
+		document.body.style.background = "linear-gradient(to bottom right, #5FC2FF, #4A61D1)";	
+	}
+	else{
+		document.body.style.background = "url('images/" + sel + ".png')";
+		document.body.style.backgroundSize = "cover";
+	}
+	
+	var fieldNameElement = document.getElementById("currentCity");
+	
+	fieldNameElement.textContent = sel;
+	
+	document.getElementById("")
+	
+    var c, s, html = "";
+    
+    for(var i = 0; i < cityObj.length; i++) {
+    
+    	if (cityObj[i].name == sel){
+	    	for(var j = 0; j < cityObj[i].weekday.length; j++) {
+		    	
+		    	for(var k = 0; k < cityObj[i].weekday[j].shows.length; k++) {
+			    	
+			    	html += "<tr>";
+			    	html += "<td>" + cityObj[i].weekday[j].day + "</td>";
+			    	html += "<td><a href='#'>" + cityObj[i].weekday[j].shows[k].name + "</a></td>";
+			    	html += "<td>" + cityObj[i].weekday[j].shows[k].time + "</td>";
+			    	html += "<td>" + cityObj[i].weekday[j].shows[k].address + "</td>";
+			    	html += "</tr>"
+			    	
+		    	}
+	    	}
+    	}
+    
+	}
+ 	document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th></tr>" + html;
+    
+}
+
+/*
+x += cityObj.name + "<br>";
+
+for (i in cityObj.weekday) {
+	x += "<h2>" + cityObj.weekday[i].day + "</h2>";
+}
+
+document.getElementById("demo").innerHTML = x;
+*/ 
