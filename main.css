@@ -16,6 +16,7 @@ body {
   -webkit-perspective: 800px;
 }
 
+<<<<<<< Updated upstream
 .liink {
 	padding: 0px;
     text-decoration: none;
@@ -39,6 +40,8 @@ body {
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
+=======
+>>>>>>> Stashed changes
 .myNav{
 	z-index: 999;
 }
@@ -234,8 +237,13 @@ body {
     left: 0;
     top: 0;
     opacity: 0;
+<<<<<<< Updated upstream
     animation: colorchange 59s infinite;
     -webkit-animation: colorchange 59s infinite;
+=======
+    animation: colorchange 59s;
+    -webkit-animation: colorchange 59s;
+>>>>>>> Stashed changes
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -256,8 +264,11 @@ body {
     color: white;
     font-family: "Roboto";
     font-weight: 700;
+<<<<<<< Updated upstream
     width: 632px;
     margin: 0 auto;
+=======
+>>>>>>> Stashed changes
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
 }
@@ -270,6 +281,11 @@ body {
     font-family: "Old Standard TT";
     font-style: italic;
     display: block; /* Display block instead of inline */
+<<<<<<< Updated upstream
+=======
+    width: 300px;
+    margin: 0 auto;
+>>>>>>> Stashed changes
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
@@ -281,6 +297,11 @@ body {
     font-family: "Old Standard TT";
     font-style: italic;
     display: block; /* Display block instead of inline */
+<<<<<<< Updated upstream
+=======
+    width: 300px;
+    margin: 0 auto;
+>>>>>>> Stashed changes
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
@@ -372,6 +393,7 @@ body {
       50%  {background: #57b8ff;}
       75%  {background: #b3da80;}
       100% {background: #ff5555;}
+<<<<<<< Updated upstream
     }
  @media (max-width: 650px) {
 	 .overlay p {
@@ -397,3 +419,6 @@ body {
 		font-size: 50px;
 	 }
  }
+=======
+    }
+>>>>>>> Stashed changes
