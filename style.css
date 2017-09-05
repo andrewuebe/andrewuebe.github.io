@@ -200,7 +200,7 @@ logo a {
     width: 38px;
     height: 38px;
     overflow: hidden;
-    background: rgba(9, 20, 59, 0.25) url("images/dropdownmenu.svg") no-repeat 95% 50%;
+    background: rgba(9, 20, 59, 0.25) url("images/downarrow.svg") no-repeat 95% 50%;
     font-family: 'proxima-nova';
     border-radius: 40px;
     margin: 20px auto;
