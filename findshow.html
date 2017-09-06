@@ -7,15 +7,6 @@
 		<title>Find an open mic</title>
 		<link rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEOYBAQH+CwsL/wsLC/8BAQH/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/+Pj4////////////+Pj4/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////////AAAA//////8AAAD/AAAA//////8AAAD///////////8AAAD/AAAAAAAAAAAAAAAAAAAA/////////////////wAAAP//////AAAA/wAAAP//////AAAA/////////////////wAAAP8AAAAAAAAAAAAAAP////////////j4+P8AAAD//////wAAAP8AAAD//////wAAAP/4+Pj///////////8AAAD/AAAAABQUFOP///////////////8AAAD//Pz8//////8AAAD/AAAA///////8/Pz/AAAA/////////////////wAAAP8BAQH+////////////////AAAA/////////////////////////////////wAAAP////////////////8AAAD/CAgI/////////////////wAAAP8QEBD/EBAQ/wAAAP8AAAD/EBAQ/xAQEP8AAAD/////////////////AAAA/wgICP////////////X19f8AAAD///////////8AAAD/AAAA////////////AAAA//X19f///////////wAAAP8BAQH+//////////8AAAD///////////8AAAD///////////8AAAD///////////8AAAD///////////8AAAD/FBQU4////////////////wUFBf8AAAD//////////////////////wAAAP8FBQX/////////////////AAAA/wAAAAAAAAD///////////8AAAD/////////////////////////////////MTEx////////////AAAA/wAAAAAAAAAAAAAA//////8AAAD///////////////////////////////////////////8uLi7//////wAAAP8AAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/////////////////////////////////AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAA+B8AAOAHAADAAwAAgAEAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMADAADgBwAA+B8AAA==" type="image/x-icon">
                 <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEOYBAQH+CwsL/wsLC/8BAQH/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/+Pj4////////////+Pj4/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////////AAAA//////8AAAD/AAAA//////8AAAD///////////8AAAD/AAAAAAAAAAAAAAAAAAAA/////////////////wAAAP//////AAAA/wAAAP//////AAAA/////////////////wAAAP8AAAAAAAAAAAAAAP////////////j4+P8AAAD//////wAAAP8AAAD//////wAAAP/4+Pj///////////8AAAD/AAAAABQUFOP///////////////8AAAD//Pz8//////8AAAD/AAAA///////8/Pz/AAAA/////////////////wAAAP8BAQH+////////////////AAAA/////////////////////////////////wAAAP////////////////8AAAD/CAgI/////////////////wAAAP8QEBD/EBAQ/wAAAP8AAAD/EBAQ/xAQEP8AAAD/////////////////AAAA/wgICP////////////X19f8AAAD///////////8AAAD/AAAA////////////AAAA//X19f///////////wAAAP8BAQH+//////////8AAAD///////////8AAAD///////////8AAAD///////////8AAAD///////////8AAAD/FBQU4////////////////wUFBf8AAAD//////////////////////wAAAP8FBQX/////////////////AAAA/wAAAAAAAAD///////////8AAAD/////////////////////////////////MTEx////////////AAAA/wAAAAAAAAAAAAAA//////8AAAD///////////////////////////////////////////8uLi7//////wAAAP8AAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/////////////////////////////////AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAA+B8AAOAHAADAAwAAgAEAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAgAEAAMADAADgBwAA+B8AAA==" type="image/x-icon">
-		<style>
-			body {
-				background: #4A61D1; /* For browsers that do not support gradients */
-				background: -webkit-linear-gradient(left top, #5FC2FF, #4A61D1); /* For Safari 5.1 to 6.0 */
-				background: -o-linear-gradient(bottom right, #5FC2FF, #4A61D1); /* For Opera 11.1 to 12.0 */
-				background: -moz-linear-gradient(bottom right, #5FC2FF, #4A61D1); /* For Firefox 3.6 to 15 */
-				background: linear-gradient(to bottom right, #5FC2FF, #4A61D1); /* Standard syntax */
-			}
-		</style>
 	</head>
 	<body>
 		<div id="navbar">
@@ -29,15 +20,17 @@
 				<li><a href="#">ADD A SHOW</a></li>
 			</ul>
 		</div>
-		<div id="searchCentral">
+		<div id="topGradient">
 			<div id="currentCity">Choose a city:</div>
 			<div class="select-style">
 				<select id="myselect" onchange="change_myselect(this.value)">
 				<option value="choose a city:">Choose a city:</option>
-				<option value="chicago">Chicago</option>
-				<option value="new york city">New York City</option>
+				<option value="CHI">Chicago</option>
+				<option value="NYC">New York City</option>
 				</select>
 			</div>
+		</div>
+		<div id="searchCentral">
 			<div id="myTable"></div>
 		</div>
 	  

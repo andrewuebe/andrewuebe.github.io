@@ -1,10 +1,166 @@
-var cityObj, i, j, x = "";
-cityObj = [
-	{"name": "chicago",
-		"weekday": [
-			{"day": "sunday", 
-				"shows": [
-					{"id": 1,
+// FOR 'DAY' KEY: 0 = Sunday, 1 = Monday, 2 = Tuesday ... 7 = Saturday
+
+var masterShows = [{
+  "id": 1,
+  "city":"CHI",
+  "day": 0,
+  "name": "Funday Sunday",
+  "time": "4:00 PM - 8:00 PM",
+  "location": "Cuzin's",
+  "address": "17704 Oak Park Ave, Tinley Park, IL 60477",
+  "genres": "blues",
+  "freq": "weekly",
+  "website": "http://",
+  "host": "Billy King",
+  "signup-time": "4:00 PM",
+  "equipment": ["mic", "drum kit"],
+  "under21": "yes",
+  "notes": ""
+},{"id": 2,
+  "city":"CHI",
+  "day": 0,
+  "name": "Soap Box Open Mic",
+  "time": "10:00 PM",
+  "location": "Grand River Bar & Grill",
+  "address": "3032 N Lincoln Ave, Chicago, IL",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://www.facebook.com/grandriverchi/",
+  "host": "",
+  "signup-time": "9:30 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": ""
+},{"id": 3,
+  "city":"CHI",
+  "day": 0,
+  "name": "Chicago's Rising Stars Mic",
+  "time": "8:00 PM",
+  "location": "Davenport's Piano Bar and Cabaret",
+  "address": "1383 N Milwaukee Ave, Chicago, IL",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://www.facebook.com/events/1179235068851527/?acontext=%7B%22ref%22%3A%223%22%2C%22ref_newsfeed_story_type%22%3A%22regular%22%2C%22action_history%22%3A%22null%22%7D",
+  "host": "",
+  "signup-time": "9:30 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": ""
+},{"id": 4,
+  "city":"CHI",
+  "day": 0,
+  "name": "Alone Star Open Mic",
+  "time": "10:30 PM",
+  "location": "North Bar",
+  "address": "1637 W North Ave, Chicago, IL",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://www.facebook.com/Alonestaropenmic",
+  "host": "",
+  "signup-time": "10:00 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": ""
+},{"id": 5,
+  "city":"CHI",
+  "day": 0,
+  "name": "Fun Simulation 2000 Open Mic!",
+  "time": "9:00 PM",
+  "location": "Reed's Local Tap",
+  "address": "3017 W. Belmont Ave, Chicago, IL",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://www.facebook.com/FunSimulation2000",
+  "host": "",
+  "signup-time": "8:30 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": ""
+},{"id": 6,
+  "city":"CHI",
+  "day": 0,
+  "name": "3 Dead Moose Open Mic",
+  "time": "8:00 PM",
+  "location": "Wills Northwoods Inn",
+  "address": "3030 N. Racine Street, Chicago, IL",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://willsnorthwoodsinn.shutterfly.com/",
+  "host": "",
+  "signup-time": "7:00 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": ""
+},{"id": 7,
+  "city":"CHI",
+  "day": 0,
+  "name": "So What Sundays Comedy Night",
+  "time": "9:00 PM",
+  "location": "Tillys Po Boys",
+  "address": "1455 Ring Road, Calumet City, IL",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://www.facebook.com/Tillys-Po-Boys-821053361262561/",
+  "host": "",
+  "signup-time": "8:30 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": ""
+},{"id": 8,
+  "city":"CHI",
+  "day": 0,
+  "name": "Out Loud Open Mic",
+  "time": "7:00 PM",
+  "location": "Laught Out Loud Theater Chicago",
+  "address": "3851 N Lincoln Ave, Chicago, IL",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://www.laughoutloudtheater.com/chicago/shows/3621/tickets",
+  "host": "",
+  "signup-time": "6:30 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": ""
+},{"id": 9,
+  "city":"CHI",
+  "day": 0,
+  "name": "Living Room Sessions",
+  "time": "6:00 PM",
+  "location": "Alive One Bar",
+  "address": "2683 N Halsted St, Chicago, IL",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://www.laughoutloudtheater.com/chicago/shows/3621/tickets",
+  "host": "",
+  "signup-time": "5:30 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": ""
+},{"id": 10,
+  "city":"NYC",
+  "day": 1,
+  "name": "The Peoples Mic",
+  "time": "3:00 PM",
+  "location": "Otto's Shrunken Head",
+  "address": "538 E 14th St, New York, NY",
+  "genres": "stand-up comedy",
+  "freq": "weekly",
+  "website": "https://www.laughoutloudtheater.com/chicago/shows/3621/tickets",
+  "host": "",
+  "signup-time": "2:30 PM",
+  "equipment": ["mic"],
+  "under21": "notsure",
+  "notes": "pre-sign up on freemics.con or jimmypeoples.com. walkins welcome."
+}
+]
+
+var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
+
+
+
+/*{"id": 1,
 					"name": "Funday Sunday",
 					"time": "4:00 PM - 8:00 PM",
 					"location": "Cuzin's",
@@ -20,85 +176,11 @@ cityObj = [
 					"signup": "4:00 PM",
 					"under21": "yes"
 					}
-				]
-				
-			},
-			{"day": "saturday",
-				"shows": [
-					{"id": 2,
-					"name": "Funday Saturday",
-					"time": "4:00 PM - 8:00 PM",
-					"location": "Cuzin's",
-					"address": "17704 Oak Park Ave, Tinley Park, IL 60477",
-					"genres": "Blues",
-					"freq": "Weekly",
-					"equipment": [
-						"drum kit", 
-						"mic"
-						],
-					"website": "http://",
-					"host": "Billy King",
-					"signup": "4:00 PM",
-					"under21": "yes"
-					}
-
-				]
-				
-			},
-	
-		]
-	},
-	{"name": "new york city",
-		"weekday": [
-			{"day": "monday", 
-				"shows": [
-					{"id": 3,
-					"name": "THE GREATEST SHOW EVER!!!",
-					"time": "9:00 PM",
-					"location": "Barry's Pad",
-					"address": "929 E. Elm Rd. Brooklyn, NY 11210",
-					"genres": "Comedy",
-					"freq": "Weekly",
-					"equipment": [
-						"drum kit", 
-						"mic"
-					],
-					"website": "http://",
-					"host": "Billy King",
-					"signup": "4:00 PM",
-					"under21": "yes"
-					}
-				]
-				
-			},
-			{"day": "wednesday",
-				"shows": [
-					{"id": 4,
-					"name": "Check THIS show out!!",
-					"time": "10:00 PM",
-					"location": "The Fat Apple Bar and Grille",
-					"address": "4 West School Lane Bronx, NY 10452",
-					"genres": "Blues",
-					"freq": "Weekly",
-					"equipment": [
-						"drum kit", 
-						"mic"
-						],
-					"website": "http://",
-					"host": "Billy King",
-					"signup": "4:00 PM",
-					"under21": "yes"
-					}
-
-				]
-				
-			},
-	
-		]
-}]
-
+*/			
+					
 function change_myselect(sel) {
 	
+/*	
 	if (sel == "choose a city:") {
 		document.body.style.background = "linear-gradient(to bottom right, #5FC2FF, #4A61D1)";	
 	}
@@ -135,7 +217,47 @@ function change_myselect(sel) {
     
 	}
  	document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th></tr>" + html;
-    
+*/
+
+var html = "";
+
+var userWantsThisCity = sel;
+
+var showToUser = masterShows.filter(function(show){
+  return show.city == userWantsThisCity
+});
+
+var fieldNameElement = document.getElementById("currentCity");
+
+if (userWantsThisCity == "choose a city:") {
+		document.getElementById("topGradient").style.background = "linear-gradient(to bottom right, #5FC2FF, #4A61D1)";
+		fieldNameElement.textContent = userWantsThisCity;
+}
+else{
+	document.body.style.background = "url('images/" + sel + ".png')";
+	document.body.style.backgroundSize = "cover";
+	
+	if (userWantsThisCity == "CHI") {
+		fieldNameElement.textContent = "Chicago";
+	}
+	else{
+		fieldNameElement.textContent = "New York City";
+	}
+}
+
+for (var i = 0; i < showToUser.length; i++){
+	
+	html += "<tr>";
+	html += "<td>" + weekday[showToUser[i].day] + "</td>";
+	html += "<td><a href='#'>" + showToUser[i].name + "</a></td>";
+	html += "<td>" + showToUser[i].time + "</td>";
+	html += "<td>" + showToUser[i].address + "</td>";
+	html += "</tr>"
+	
+}
+
+document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th></tr>" + html;
+
 }
 
 /*
