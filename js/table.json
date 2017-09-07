@@ -173,7 +173,7 @@ var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
 					],
 					"website": "http://",
 					"host": "Billy King",
-					"signup": "4:00 PM",
+					"signup": "4:00 PM", 
 					"under21": "yes"
 					}
 */			
