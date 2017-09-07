@@ -234,7 +234,7 @@ if (userWantsThisCity == "choose a city:") {
 		fieldNameElement.textContent = userWantsThisCity;
 }
 else{
-	document.getElementById("topGradient").style.background = "url('images/" + sel + ".png')";
+	document.getElementById("topGradient").style.background = "url('/images/" + sel + ".png')";
 	document.getElementById("topGradient").style.backgroundSize = "cover";
 	
 	if (userWantsThisCity == "CHI") {
