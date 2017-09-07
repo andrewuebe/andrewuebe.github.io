@@ -10,7 +10,7 @@ body {
 	background-color: white;
 	box-sizing: inherit;
 	margin: 0 auto;
-	font-family: 'proxima-nova';
+	font-family: "proxima-nova";
 	height: 100%;
 	width: 100%;
 }
@@ -214,7 +214,7 @@ logo a {
     height: 38px;
     overflow: hidden;
     background: rgba(9, 20, 59, 0.25) url("images/downarrow.svg") no-repeat 95% 50%;
-    font-family: 'proxima-nova';
+    font-family: "proxima-nova";
     border-radius: 40px;
     margin: 20px auto;
 }
@@ -228,7 +228,7 @@ logo a {
     background: transparent;
     background-image: none;
     -webkit-appearance: none;
-    font-family: 'proxima-nova';
+    font-family: "proxima-nova";
     font-size: 10px;
     padding-left: 50px;
 }
