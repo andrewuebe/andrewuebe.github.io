@@ -93,6 +93,22 @@ h2 a:hover {
 	color: #fff039;
 }
 
+.topOfSection {
+	position: relative;
+	font-weight: 200;
+	font-size: 18px;
+	color: #2c2c2c;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	border-top: 4px solid #4A61D1;
+	border-bottom: 4px solid #4A61D1;
+	width: 200px;
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
 #whatWeDo {
 	display: block;
 	position: relative;
@@ -109,13 +125,13 @@ h2 a:hover {
 	background-size: 800px 500px;
 	background-position: center center;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 30px;
 }
 
 #whatText {
 	display: block;
 	position: relative;
-	color: #4A61D1;
+	color: #2c2c2c;
 	text-align: center;
 	font-size: 25px;
 }
