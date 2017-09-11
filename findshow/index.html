@@ -29,6 +29,19 @@
 				<option value="NYC">New York City</option>
 				</select>
 			</div>
+			<input type="text" id="myInput" onkeyup="filter_myselect()" placeholder="Search for names.." title="Type in a name">
+			<ul class="form-style">
+				<form id="showFilter" onsubmit="filter_myselect()">
+				<li><input type="checkbox" name="sunday" value="0" checked> Sun</li>
+				<li><input type="checkbox" name="sunday" value="1" checked> Mon</li>
+				<li><input type="checkbox" name="sunday" value="2" checked> Tue</li>
+				<li><input type="checkbox" name="sunday" value="3" checked> Wed</li>
+				<li><input type="checkbox" name="sunday" value="4" checked> Thu</li>
+				<li><input type="checkbox" name="sunday" value="5" checked> Fri</li>
+				<li><input type="checkbox" name="sunday" value="6" checked> Sat</li>
+				<input type="submit" value="Filter">
+				</form>
+			</ul>
 		</div>
 		<div id="searchCentral">
 			<div id="myTable"></div> 

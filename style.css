@@ -28,7 +28,6 @@ body {
 	color: white;
 }
 
-
 .landing {
 	width: 100%;
 	z-index: 1000;
@@ -296,6 +295,20 @@ logo a {
 
 .select-style select:focus {
     outline: none;
+}
+
+ul.form-style {
+	margin: 0 auto;
+	width: 400px;
+	color: white;
+}
+
+ul.form-style form li {
+	display: inline-block;
+}
+
+input#myInput {
+	margin: 0 auto;
 }
 
 table th, td {

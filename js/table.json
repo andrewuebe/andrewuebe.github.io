@@ -156,116 +156,66 @@ var masterShows = [{
 
 var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-
-
-
-
-/*{"id": 1,
-					"name": "Funday Sunday",
-					"time": "4:00 PM - 8:00 PM",
-					"location": "Cuzin's",
-					"address": "17704 Oak Park Ave, Tinley Park, IL 60477",
-					"genres": "Blues",
-					"freq": "Weekly",
-					"equipment": [
-						"drum kit", 
-						"mic"
-					],
-					"website": "http://",
-					"host": "Billy King",
-					"signup": "4:00 PM", 
-					"under21": "yes"
-					}
-*/			
-					
 function change_myselect(sel) {
+		
+	var html = "";
 	
-/*	
-	if (sel == "choose a city:") {
-		document.body.style.background = "linear-gradient(to bottom right, #5FC2FF, #4A61D1)";	
-	}
-	else{
-		document.body.style.background = "url('images/" + sel + ".png')";
-		document.body.style.backgroundSize = "cover";
-	}
+	var userWantsThisCity = sel;
+	
+	var showToUser = masterShows.filter(function(show){
+	  return show.city == userWantsThisCity
+	});
 	
 	var fieldNameElement = document.getElementById("currentCity");
 	
-	fieldNameElement.textContent = sel;
-	
-	document.getElementById("")
-	
-    var c, s, html = "";
-    
-    for(var i = 0; i < cityObj.length; i++) {
-    
-    	if (cityObj[i].name == sel){
-	    	for(var j = 0; j < cityObj[i].weekday.length; j++) {
-		    	
-		    	for(var k = 0; k < cityObj[i].weekday[j].shows.length; k++) {
-			    	
-			    	html += "<tr>";
-			    	html += "<td>" + cityObj[i].weekday[j].day + "</td>";
-			    	html += "<td><a href='#'>" + cityObj[i].weekday[j].shows[k].name + "</a></td>";
-			    	html += "<td>" + cityObj[i].weekday[j].shows[k].time + "</td>";
-			    	html += "<td>" + cityObj[i].weekday[j].shows[k].address + "</td>";
-			    	html += "</tr>"
-			    	
-		    	}
-	    	}
-    	}
-    
-	}
- 	document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th></tr>" + html;
-*/
-
-var html = "";
-
-var userWantsThisCity = sel;
-
-var showToUser = masterShows.filter(function(show){
-  return show.city == userWantsThisCity
-});
-
-var fieldNameElement = document.getElementById("currentCity");
-
-if (userWantsThisCity == "choose a city:") {
-		document.getElementById("topGradient").style.background = "linear-gradient(to bottom right, #5FC2FF, #4A61D1)";
-		fieldNameElement.textContent = userWantsThisCity;
-}
-else{
-	document.getElementById("topGradient").style.background = "url('/images/" + sel + ".png')";
-	document.getElementById("topGradient").style.backgroundSize = "cover";
-	
-	if (userWantsThisCity == "CHI") {
-		fieldNameElement.textContent = "Chicago";
+	if (userWantsThisCity == "choose a city:") {
+			document.getElementById("topGradient").style.background = "linear-gradient(to bottom right, #5FC2FF, #4A61D1)";
+			fieldNameElement.textContent = userWantsThisCity;
 	}
 	else{
-		fieldNameElement.textContent = "New York City";
+		document.getElementById("topGradient").style.background = "url('/images/" + sel + ".png')";
+		document.getElementById("topGradient").style.backgroundSize = "cover";
+		
+		if (userWantsThisCity == "CHI") {
+			fieldNameElement.textContent = "Chicago";
+		}
+		else{
+			fieldNameElement.textContent = "New York City";
+		}
 	}
-}
-
-for (var i = 0; i < showToUser.length; i++){
 	
-	html += "<tr>";
-	html += "<td>" + weekday[showToUser[i].day] + "</td>";
-	html += "<td><a href='#'>" + showToUser[i].name + "</a></td>";
-	html += "<td>" + showToUser[i].time + "</td>";
-	html += "<td>" + showToUser[i].address + "</td>";
-	html += "</tr>"
+	for (var i = 0; i < showToUser.length; i++){
+		
+		html += "<tr>";
+		html += "<td>" + weekday[showToUser[i].day] + "</td>";
+		html += "<td><a href='#'>" + showToUser[i].name + "</a></td>";
+		html += "<td>" + showToUser[i].time + "</td>";
+		html += "<td><a href='https://maps.google.com/?q=" + showToUser[i].address + "'>" + showToUser[i].address + "</a></td>";
+		html += "</tr>"
+		
+	}
+	
+	document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th></tr>" + html;
+
+}
+
+function filter_myselect() {
+	
+	var input, filter, table, tr, td, i;
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("myTable");
+	tr = table.getElementsByTagName("tr");
+	for (i = 0; i < tr.length; i++) {
+	td = tr[i].getElementsByTagName("td")[1];
+	if (td) {
+	  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	    tr[i].style.display = "";
+	  } else {
+	    tr[i].style.display = "none";
+	  }
+	}       
+	}
 	
 }
 
-document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th></tr>" + html;
-
-}
-
-/*
-x += cityObj.name + "<br>";
-
-for (i in cityObj.weekday) {
-	x += "<h2>" + cityObj.weekday[i].day + "</h2>";
-}
-
-document.getElementById("demo").innerHTML = x;
-*/ 
