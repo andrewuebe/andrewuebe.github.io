@@ -298,6 +298,7 @@ logo a {
 }
 
 ul.form-style {
+	padding: 0;
 	margin: 0 auto;
 	width: 500px;
 	color: white;
@@ -305,7 +306,7 @@ ul.form-style {
 
 ul.form-style form li {
 	display: inline-block;
-	margin-left: 10px;
+	margin-left: 15px;
 }
 
 input#myInput {
@@ -313,6 +314,7 @@ input#myInput {
 	margin: 0 auto;
 	padding: 5px;
 	margin-bottom: 15px;
+	width: 300px;
 }
 
 table th, td {

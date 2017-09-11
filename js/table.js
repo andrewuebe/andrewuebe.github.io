@@ -199,7 +199,26 @@ function change_myselect(sel) {
 
 }
 
-function filter_myselect() {
+
+document.getElementById("myForm").addEventListener("change", function(event){
+	event.preventDefault()
+	myFunction(event)
+})
+
+document.getElementById("myForm").addEventListener("keyup", function(event){
+	event.preventDefault()
+	myFunction(event)
+})
+
+function myFunction(e) {
+	console.log(e)
+	var checkedDays = document.getElementById("myForm").elements
+	var validDays = []
+	for (var i = 0; i < checkedDays.length; i++){
+		if (checkedDays[i].checked){
+			validDays.push(checkedDays[i].value)
+		}
+	}
 	
 	var input, filter, table, tr, td, i;
 	input = document.getElementById("myInput");
@@ -208,20 +227,17 @@ function filter_myselect() {
 	tr = table.getElementsByTagName("tr");
 	for (i = 0; i < tr.length; i++) {
 	td = tr[i].getElementsByTagName("td")[1];
+	td2 = tr[i].getElementsByTagName("td")[0];
 	if (td) {
-	  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	  if (td.innerHTML.toUpperCase().indexOf(filter) > -1 && validDays.includes(td2.innerHTML)) {
 	    tr[i].style.display = "";
 	  } else {
 	    tr[i].style.display = "none";
 	  }
 	}       
 	}
-	
+
+		
 }
 
-document.getElementById("showFilter").addEventListener("change", myFunction(event))
-
-function myFunction(e) {
-	console.log(e);
-}
 
