@@ -20,30 +20,47 @@
 				<li><a href="../addshow/">ADD A SHOW</a></li>
 			</ul>
 		</div>
-		<div id="topGradient">
-			<div id="currentCity">Choose a city:</div>
-			<div class="select-style">
-				<select id="myselect" onchange="change_myselect(this.value)">
-				<option value="choose a city:">Choose a city:</option>
-				<option value="CHI">Chicago</option>
-				<option value="NYC">New York City</option>
-				</select>
-			</div>
-			<ul class="form-style">
-				<form id="myForm" onkeyup="" onchange="">
-				<input type="text" id="myInput" placeholder="Search show names.." title="Type in a name">
-				<li><input type="checkbox" value="Sunday" checked> Sun</li>
-				<li><input type="checkbox" value="Monday" checked> Mon</li>
-				<li><input type="checkbox" value="Tuesday" checked> Tue</li>
-				<li><input type="checkbox" value="Wednedsay" checked> Wed</li>
-				<li><input type="checkbox" value="Thursday" checked> Thu</li>
-				<li><input type="checkbox" value="Friday" checked> Fri</li>
-				<li><input type="checkbox" value="Saturday" checked> Sat</li>
-				</form>
-			</ul>
-		</div>
 		<div id="searchCentral">
-			<div id="myTable"></div> 
+			<div id="topGradient">
+				<div id="currentCity">Choose a city:</div>
+				<div class="select-style">
+					<select id="myselect" onchange="change_myselect(this.value)">
+					<option value="choose a city:">Choose a city:</option>
+					<option value="CHI">Chicago</option>
+					<option value="NYC">New York City</option>
+					</select>
+				</div>
+				<ul class="form-style">
+					<form id="myForm" onkeyup="" onchange="">
+					<input type="text" id="myInput" placeholder="Search show names.." title="Type in a name">
+					<li><input type="checkbox" value="Sunday" checked> Sun</li>
+					<li><input type="checkbox" value="Monday" checked> Mon</li>
+					<li><input type="checkbox" value="Tuesday" checked> Tue</li>
+					<li><input type="checkbox" value="Wednedsay" checked> Wed</li>
+					<li><input type="checkbox" value="Thursday" checked> Thu</li>
+					<li><input type="checkbox" value="Friday" checked> Fri</li>
+					<li><input type="checkbox" value="Saturday" checked> Sat</li>
+					</form>
+				</ul>
+			</div>
+			<div id="searchResults">
+				<div id="myTable"></div> 
+			</div>
+		</div>
+		<div id="showDetails" style="opacity: 0;">
+			<div class="leftHalf">
+				<div id="showName">Chicago's Rising Stars Mic</div>
+			</div>
+			<div class="rightHalf">
+				<div class="rightContainer">
+					<div id="showDay"><div class="dayValue">Day</div> Sunday</div>
+					<div id="showTime"><div class="dayValue">Time</div>4:00 PM - 6:00 PM</div>
+					<div id="showFreq"><div class="dayValue">Frequency</div>Weekly</div>
+					<div id="showGenre"><div class="dayValue">Genre</div>Blues</div>
+					<div id="showLocation"><div class="dayValue">At</div>Cuzin's</div>
+					<div id="showAddress"><div class="dayValue">Address</div>17704 Oak Park Ave, Tinley Park, IL 60477</div>
+				</div>
+			</div>
 		</div>
 	  
 	<script src="../js/table.js"></script>

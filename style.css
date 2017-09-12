@@ -178,6 +178,9 @@ logo {
 }
 
 #lilguy {
+	display: block;
+	position: absolute;
+	margin-left: 203px;
 	color: white;
 	font-weight: 200;
 	font-size: 6px;
@@ -198,16 +201,18 @@ logo a {
 }
 
 #navbar ul {
+	display: block;
+	width: 540px;
 	list-style: none;
 	float: right;
-	margin-right: 80px;
+	margin-top: 35px;
 }
 
 #navbar li {
 	list-style: none;
 	float: left;
-	margin-left: 80px;
-	margin-top: -15px;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 
 #navbar li a {
@@ -252,6 +257,10 @@ logo a {
 }
 
 #searchCentral {
+	display: block;
+}
+
+#searchResults {
 	position: absolute;
 	margin-top: 375px;
 	width: 100%;
@@ -357,4 +366,101 @@ table th {
 	background-color: rgba(9, 20, 59, 0.25);
 	font-size: 20px;
 	color: white;
+}
+
+#showDetails {
+	display: none;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, height 0.5s;
+	-moz-transition: opacity 0.5s, height 0.5s;
+	-o-transition: opacity 0.5s, height 0.5s;
+	transition: opacity 0.5s, height 0.5s;
+}
+
+.leftHalf {
+	position:absolute;
+	left: 0;
+	width: 50%;
+	padding-top: 90px;
+}
+
+.rightHalf {
+	position:absolute;
+	right: 0;
+	width: 50%;
+	padding-top: 90px;
+}
+
+#showName {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	display: block;
+	top: 50%;
+	left: 50%;
+	margin-top: 150px;
+	margin-left: -150px;
+	color: #2c2c2c;
+	font-size: 75px;
+	font-weight: 600;
+}
+
+#showCity {
+	position: absolute;
+	color: #4A61D1;
+	font-weight: 200;
+	font-size: 30px;
+	letter-spacing: 5px;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: 425px;
+}
+
+.rightContainer {
+	position: absolute;
+	width: 400px;
+	display: block;
+	top: 50%;
+	left: 10px;
+	margin-top: 100px;
+	background: #4A61D1; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #5FC2FF, #4A61D1); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #5FC2FF, #4A61D1); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #5FC2FF, #4A61D1); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #5FC2FF, #4A61D1); /* Standard syntax */
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.dayValue {
+	color: white;
+	font-weight: 200;
+	font-size: 20px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+#showDay {
+	position: relative;
+	display: block;
+	color: white;
+	font-size: 35px;
+	font-weight: 600;
+	width: 150px;
+}
+
+#showTime, #showFreq, #showLocation, #showGenre, #showAddress{
+	position: relative;
+	display: block;
+	color: white;
+	font-size: 35px;
+	font-weight: 600;
+	width: 300px;
+	float: left;
+	margin-top: 10px;
 }

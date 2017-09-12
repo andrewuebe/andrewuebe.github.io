@@ -188,7 +188,7 @@ function change_myselect(sel) {
 		
 		html += "<tr>";
 		html += "<td>" + weekday[showToUser[i].day] + "</td>";
-		html += "<td><a href='#'>" + showToUser[i].name + "</a></td>";
+		html += "<td><a href='#' onclick='displayShowDetails(this.name)' name='" + showToUser[i].id + "'>" + showToUser[i].name + "</a></td>";
 		html += "<td>" + showToUser[i].time + "</td>";
 		html += "<td><a href='https://maps.google.com/?q=" + showToUser[i].address + "'>" + showToUser[i].address + "</a></td>";
 		html += "</tr>"
@@ -238,6 +238,43 @@ function myFunction(e) {
 	}
 
 		
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function displayShowDetails(idNum){
+	event.preventDefault(idNum)
+	window.location = '#';
+	
+	var showThisShow = masterShows.filter(function(show){
+	  return show.id == idNum
+	});
+	
+	
+	var searchArea = document.getElementById("searchCentral");
+	var showDetailArea = document.getElementById("showDetails");
+	
+	searchArea.style.display = "none";
+	searchArea.style.opacity = "0";
+	
+	
+	document.getElementById("showName").innerHTML = showThisShow[0].name;
+	
+	document.getElementById("showDay").innerHTML = "<div class='dayValue>Day</div>" + weekday[showThisShow[0].day] + "</div>";
+	document.getElementById("showTime").innerHTML = "<div class='dayValue'>Time</div>" + showThisShow[0].time + "</div>";
+	document.getElementById("showFreq").innerHTML = "<div class='dayValue'>Frequency</div>" + capitalizeFirstLetter(showThisShow[0].freq) + "</div>";
+	document.getElementById("showGenre").innerHTML = "<div class='dayValue'>Genre</div>" + capitalizeFirstLetter(showThisShow[0].genres) + "</div>";
+	document.getElementById("showLocation").innerHTML = "<div class='dayValue'>At</div>" + showThisShow[0].location + "</div>";
+	document.getElementById("showAddress").innerHTML = "<div class='dayValue'>Address</div>" + showThisShow[0].address + "</div>";
+	
+	
+	showDetailArea.style.display = "block";
+	showDetailArea.style.opacity = "1";
+	showDetailArea.style.height = "100%";
+	
+	
 }
 
 
