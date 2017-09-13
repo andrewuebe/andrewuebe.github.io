@@ -154,6 +154,20 @@ var masterShows = [{
 }
 ]
 
+window.onload=function() { 
+	var url = window.location.href;
+var lastPart = url.substr(url.lastIndexOf('/') + 1);
+
+if (lastPart === "null") {
+   console.log("yay")
+}
+else {
+	console.log("boo")
+}
+   
+}; 
+
+
 var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function change_myselect(sel) {
