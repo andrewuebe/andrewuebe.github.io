@@ -22,11 +22,22 @@
 		</div>
 		<header class="addShow">
 			<div class="biggercontainer">
-				<form>
+				<form method="POST" id="theform" action="#)" onsubmit="mailto:andrewuebe@gmail.com">
+					<div class="question" style="font-size: 30px;">Show name<br><input type="text" name="newShowName"></div><br>
+					<div class="question">Day of week<input type="text" name="newShowDay"></div><div class="question">When is it?<input type="text" name="newShowDay"></div><br>
+					<div class="question">Frequency<input type="text" name="newShowFreq"></div><div class="question">Where is it?<input type="text" name="newShowLocation"></div><br>
+					<div class="question">Street Address<input type="text" name="newShowAddress"></div><div class="question">What genre(s)?<input type="text" name="newShowLocation"></div><br>
+					<div class="question">Host name<input type="text" name="newShowHost"></div><div class="question">Host email<input type="text" name="newShowEmail"></div><br>
+					<input type="submit">
 				</form>
+				<div id="formComplete" class="container"  style="display: none;">
+					<h1>Thanks for submitting your open mic to <logostyle><l style="color: #fff039;">Mic</l>Search</logostyle>!<br> We will get your show on our site soon.</h1>
+					<h2 style="font-size: 12px; margin-top: 10px;"><a href="../findshow/">FIND A SHOW!</a></h2>
+				</div>
 			</div>
 		</header>
-
+		<div id="myForm"></div>
+		<script src="../js/table.js"></script>
 	</body>
 	
 </html>

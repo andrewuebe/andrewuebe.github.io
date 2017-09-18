@@ -154,19 +154,6 @@ var masterShows = [{
 }
 ]
 
-window.onload=function() { 
-	var url = window.location.href;
-var lastPart = url.substr(url.lastIndexOf('/') + 1);
-
-if (lastPart === "null") {
-   console.log("yay")
-}
-else {
-	console.log("boo")
-}
-   
-}; 
-
 
 var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -184,7 +171,7 @@ function change_myselect(sel) {
 	
 	if (userWantsThisCity == "choose a city:") {
 			document.getElementById("topGradient").style.background = "linear-gradient(to bottom right, #5FC2FF, #4A61D1)";
-			fieldNameElement.textContent = userWantsThisCity;
+			fieldNameElement.textContent = capitalizeFirstLetter(userWantsThisCity);
 	}
 	else{
 		document.getElementById("topGradient").style.background = "url('/images/" + sel + ".png')";
@@ -254,6 +241,7 @@ function myFunction(e) {
 		
 }
 
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -289,6 +277,22 @@ function displayShowDetails(idNum){
 	showDetailArea.style.height = "100%";
 	
 	
+}
+
+document.getElementById("theform").addEventListener("submit", function(event){
+	event.preventDefault()
+	addNewShow(event)
+})
+
+
+function addNewShow(){
+	
+	var theForm = document.getElementById("theform");
+	var theMessage = document.getElementById("formComplete");
+	
+	
+	theForm.style.display = "none";
+	theMessage.style.display = "table-cell";
 }
 
 
