@@ -4,6 +4,7 @@
 		<script src="https://use.typekit.net/lgl0avq.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<title>MicSearch</title>
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -32,14 +33,22 @@
 			</div>
 			<h2>SCROLL TO LEARN MORE</h2>
 			<div id="downarrow"></div>
-		<div id="whatWeDo" class="revealOnScroll">
+		<div id="whatWeDo">
 			<div class="topOfSection">How it works</div>
-			<div id="whatImage"></div>
-			<div id="whatText">MicSearch lists every open mic in your city,<br>
+			<div class="item" id="whatImage" data-aos="zoom-in"></div>
+			<div id="whatText" data-aos="zoom-in">MicSearch lists every open mic in your city,<br>
 and makes getting to the right show simple.</div>
 		</div>
 		</header>
 		<script src="../js/table.js"></script>
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				easing: 'ease-out',
+				duration: 1000
+			});
+		</script>
 	</body>
 	
 </html>

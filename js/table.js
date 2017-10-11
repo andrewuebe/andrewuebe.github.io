@@ -192,11 +192,12 @@ function change_myselect(sel) {
 		html += "<td><a href='#' onclick='displayShowDetails(this.name)' name='" + showToUser[i].id + "'>" + showToUser[i].name + "</a></td>";
 		html += "<td>" + showToUser[i].time + "</td>";
 		html += "<td><a href='https://maps.google.com/?q=" + showToUser[i].address + "'>" + showToUser[i].address + "</a></td>";
+		html += "<td>" + showToUser[i].genres + "</td>";
 		html += "</tr>"
 		
 	}
 	
-	document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th></tr>" + html;
+	document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th><th>Genre</th></tr>" + html;
 
 }
 
