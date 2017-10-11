@@ -226,6 +226,52 @@ h2 a:hover {
 	background: -moz-linear-gradient(bottom, #ffc200, white); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to bottom, #ffc200, white); /* Standard syntax */
 }
+#tryIt #barrier {
+	height: 140px;
+}
+
+#tryIt .markerLogo {
+	display: block;
+	text-indent: -9999px;
+	width: 200px;
+	height: 200px;
+	background: url(images/markerlogo.svg) no-repeat;
+	background-size: 200px 200px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+#tryIt .marker {
+	display: block;
+	position: relative;
+	text-indent: -9999px;
+	width: 200px;
+	height: 200px;
+	background: url(images/marker.svg) no-repeat;
+	background-size: 200px 200px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+#tryIt a {
+	display: block;
+	color: #2c2c2c;
+	font-weight: 700;
+	font-size: 20px;
+	letter-spacing: 8px;
+	border: 3px solid #2c2c2c;
+	text-decoration: none;
+	padding: 20px;
+	width: 265px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: none;
+	transition: 0.3s ease;
+}
+
+#tryIt a:hover {
+	background-color: white;
+}
 
 .logoimg {
 	display: block;
