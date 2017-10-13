@@ -11,6 +11,8 @@
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" type="text/css" href="../cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="../cs-skin-boxes.css" />
 	</head>
 	<body>
 		<div id="navbar">
@@ -28,7 +30,7 @@
 			<div id="topGradient">
 				<div id="currentCity">Choose a city:</div>
 				<div class="select-style">
-					<select id="myselect" onchange="change_myselect(this.value)">
+					<select id="myselect" onchange="change_myselect(this.value)" class="cs-select cs-skin-boxes">
 					<option value="choose a city:">Choose a city:</option>
 					<option value="CHI">Chicago</option>
 					<option value="NYC">New York City</option>

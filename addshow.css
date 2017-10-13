@@ -1,0 +1,142 @@
+.addShowContainer {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #4a2a93;
+}
+
+/* Form Styles */
+
+#addShowForm {
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 100px;
+	text-align: left;
+}
+
+#addShowForm fieldset {
+	border: 0;
+	height: 100%;
+	box-sizing: border-box;
+	margin-top: 0px;
+	position: relative;
+}
+
+#addShowForm fieldset:not(:first-of-type){
+	display: none;
+}
+
+/* Labels */
+
+.fieldset-label {
+	display: inline-block;
+	font-weight: 700;
+	pointer-events: none;
+	font-size: 30px;
+	color: white;
+	margin-top: 17%;
+}
+
+#counterReset {
+	counter-reset: step;
+}
+
+
+/* Inputs */
+
+.fieldset-text-input{
+	display: block;
+	margin: 0;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	background-color: transparent;
+	font-weight: 700;
+	font-size: 60px;
+	color: #fff039;
+}
+
+.fieldset-text-input::placeholder {
+	color: rgba(250,250,250,0.2);
+}
+
+.fieldset-text-input:focus {
+	outline: none;
+}
+
+fieldset .next, .previous {
+	background-color: #4a2a93;
+	border: 4px solid rgb(43,21, 107);
+	display: block;
+	height: 70px;
+	width: 150px;
+	border-radius: 300px;
+	transition: background-color 0.1s ease;
+	color: rgb(43,21,107);
+	font-family: 'proxima-nova';
+	font-weight: 700;
+	font-size: 22px;
+	float: right;
+}
+
+fieldset .next:hover, .previous:hover {
+	background-color: rgb(43,21,107);
+	color: white;
+}
+
+fieldset .next:focus, .pervious:focus {
+	background-color: rgb(43,21,107);
+	border: 4px solid rgb(43,21,107);
+	display: block;
+	height: 70px;
+	width: 150px;
+	border-radius: 300px;
+	outline: none;
+	color: white;
+}
+
+.previous {
+	margin-right: 20px;
+}
+
+#progressButtons {
+	position: relative;
+	display: block;
+	width: 321px;
+	margin: 0 auto;
+	margin-top: 200px;;
+}
+
+
+/* Progress Bar */
+
+#progressBar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	display: block;
+	width: 800px;
+	margin: 10px auto;
+	counter-reset: step;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#progressBar li {
+	list-style-type: none;
+	float: left;
+	margin-left: 32px;
+	display:  block;
+	width: 18px;
+}
+
+#progressBar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -10px;
+}
+
