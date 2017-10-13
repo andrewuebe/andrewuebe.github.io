@@ -7,8 +7,6 @@ $(".next").click(function(){
 	current_fs = ($(this).parent()).parent();
 	next_fs = ($(this).parent()).parent().next();
 	
-	//activate next step on progress
-	$("#proressBar li").eq($("#msformfieldset").index(next_fs)).addClass("active");
 	
 	//show the next fieldset
 	next_fs.show();
@@ -18,10 +16,8 @@ $(".next").click(function(){
 
 $(".previous").click(function(){
 	current_fs = ($(this).parent()).parent();
-	next_fs = ($(this).parent()).parent().next();
-	
-	//activate next step on progress
-	$("#proressBar li").eq($("#msformfieldset").index(pervious_fs)).addClass("active");
+	previous_fs = ($(this).parent()).parent().prev();
+
 	
 	//show the next fieldset
 	previous_fs.show();
