@@ -43,7 +43,7 @@
 					<li><input name="progBarButton" type="radio" id="prog13"/></li>
 					<li><input name="progBarButton" type="radio" id="prog14"/></li>
 				</ol>
-				<div id="counterReset"></div>
+				<div id="overviewHeader">Review your submission:</div>
 				<fieldset>
 					<label class="fieldset-label" for="q1">What's the show called?</label>
 					<input class="fieldset-text-input" id="q1" name="q1" type="text" placeholder="The Best Show Ever" required/>
@@ -69,13 +69,13 @@
 					<label class="fieldset-label" for="q3">What day of the week?</label>
 					
 					<div class="fieldset-radio-group">
-						<span><input id="q3sun" name="q3" type="radio" value="0" required=""/><label for="q3sun" class="radio-sun">Sunday</label></span>
-						<span><input id="q3mon" name="q3" type="radio" value="1"/><label for="q3mon" class="radio-mon">Monday</label></span>
-						<span><input id="q3tue" name="q3" type="radio" value="2"/><label for="q3tue" class="radio-tue">Tuesday</label></span>
-						<span><input id="q3wed" name="q3" type="radio" value="3"/><label for="q3wed" class="radio-wed">Wednesday</label></span>
-						<span><input id="q3thu" name="q3" type="radio" value="4"/><label for="q3thu" class="radio-thu">Thursday</label></span>
-						<span><input id="q3fri" name="q3" type="radio" value="5"/><label for="q3fri" class="radio-fri">Friday</label></span>
-						<span><input id="q3sat" name="q3" type="radio" value="6"/><label for="q3sat" class="radio-sat">Saturday</label></span>
+						<span><input id="q3sun" name="q3" type="radio" value="0" required/><label id="q3" for="q3sun" class="radio-sun">Sunday</label></span>
+						<span><input id="q3mon" name="q3" type="radio" value="1"/><label id="q3" for="q3mon" class="radio-mon">Monday</label></span>
+						<span><input id="q3tue" name="q3" type="radio" value="2"/><label id="q3" for="q3tue" class="radio-tue">Tuesday</label></span>
+						<span><input id="q3wed" name="q3" type="radio" value="3"/><label id="q3" for="q3wed" class="radio-wed">Wednesday</label></span>
+						<span><input id="q3thu" name="q3" type="radio" value="4"/><label id="q3" for="q3thu" class="radio-thu">Thursday</label></span>
+						<span><input id="q3fri" name="q3" type="radio" value="5"/><label id="q3" for="q3fri" class="radio-fri">Friday</label></span>
+						<span><input id="q3sat" name="q3" type="radio" value="6"/><label id="q3" for="q3sat" class="radio-sat">Saturday</label></span>
 					</div>
 					<div id="progressButtons">
 						<input class="next" type="button" name="next" value="Next"/>
@@ -167,8 +167,8 @@
 					<label class="fieldset-label" for="q13">Are people under 21 admitted?</label>
 					
 					<div class="fieldset-radio-group">
-						<span><input id="q13under" name="q13" type="radio" value="yes"/><label for="q13under" class="radio-conversion">Under 21</label></span>
-						<span><input id="q13over" name="q13" type="radio" value="no"/><label for="q13over" class="radio-conversion">21 and over</label></span>
+						<span><input id="q13under" name="q13" type="radio" value="yes"/><label id="q13" for="q13under" class="radio-conversion">Under 21</label></span>
+						<span><input id="q13over" name="q13" type="radio" value="no"/><label id="q13" for="q13over" class="radio-conversion">21 and over</label></span>
 					</div>
 					<div id="progressButtons">
 						<input class="next" type="button" name="next" value="Next"/>
@@ -178,7 +178,7 @@
 				
 				<fieldset>
 					<label class="fieldset-label" for="q14">Any last notes about the show?</label>
-					<input class="fieldset-text-input" id="q14" name="q14" type="text" placeholder="Mix drinks are 20% off during the show!"/>
+					<textarea class="fieldset-text-input custom-text-area" id="q14" name="q14" placeholder="Mix drinks are 20% off during the show!"></textarea>
 					<div id="progressButtons">
 						<input class="next lastButton" type="button" name="next" value="Next"/>
 						<input class="previous" type="button" name="previous" value="Previous"/>

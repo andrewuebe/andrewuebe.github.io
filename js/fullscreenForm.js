@@ -57,3 +57,5 @@ function showOverview(current) {
 	$fieldset.fadeTo(400, 1);
 
 }
+
+document.getElementsByTagName("input").onfocus = function (event) { var blurEl = this; setTimeout(function() {blurEl.focus()},10) };

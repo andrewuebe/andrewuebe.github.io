@@ -67,6 +67,14 @@
 	outline: none;
 }
 
+textarea {
+	height: 70px;
+}
+
+.custom-text-area {
+	font-size: 15px;
+}
+
 fieldset .next, .previous {
 	display: block;
 	color: white;
@@ -133,12 +141,18 @@ input[type="time"] {
 	height: 72px;
 }
 
+input[type="time"]:focus {
+	outline: none;
+}
+
 /* Radio Inputs */
 
 .fieldset-radio-group {
 	display: absolute;
 	display: block;
 	height: 95px;
+	cursor: pointer;
+	width: 100%;
 }
 
 .fieldset-radio-group input[type="radio"] {
@@ -183,7 +197,7 @@ input[type="time"] {
 	background-size: 85%;
 	background-repeat: no-repeat;
 	content: '';
-	opacity: 0.5;
+	opacity: 1;
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 	-webkit-transform: translate(-50%,-50%);
@@ -199,32 +213,20 @@ input[type="time"] {
 	background-image: url(images/chi_radio.svg);
 }
 
-.fieldset-radio-group label.radio-sun::after {
-	background-image: url('images/sun.svg');
+.fieldset-radio-group label::after {
+	background-image: url(images/checked.svg);
 }
 
-.fieldset-radio-group label.radio-mon::after {
-	background-image: url('images/mon.svg');
+.fieldset-radio-group input[type="radio"]:not(:checked) + label::after {
+  opacity: 0.5;
 }
 
-.fieldset-radio-group label.radio-tue::after {
-	background-image: url('images/tue.svg');
+.fieldset-radio-group input[type="radio"]:not(:checked) + label#q3::after {
+	background-image: url('images/unchecked.svg');
 }
 
-.fieldset-radio-group label.radio-wed::after {
-	background-image: url('images/wed.svg');
-}
-
-.fieldset-radio-group label.radio-thu::after {
-	background-image: url('images/thu.svg');
-}
-
-.fieldset-radio-group label.radio-fri::after {
-	background-image: url('images/fri.svg');
-}
-
-.fieldset-radio-group label.radio-sat::after {
-	background-image: url('images/sat.svg');
+.fieldset-radio-group input[type="radio"]:not(:checked) + label#q13::after {
+	background-image: url('images/unchecked.svg');
 }
 
 .fieldset-radio-group label:hover::after,
@@ -232,6 +234,11 @@ input[type="time"] {
 .fieldset-radio-group[type="radio"]:checked + label::after {
 	opacity: 1;
 }
+
+.fieldset-radio-group[type="radio"]:checked + label::after {
+	opacity: 1;
+}
+
 
 /* Progress Bar */
 
@@ -273,3 +280,43 @@ input[type="time"] {
 	opacity: 1;
 	display: block;
 }
+
+#overviewHeader {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.formOverview #overviewHeader {
+	display: block;
+	position: relative;
+	opacity: 1;
+	color: #fff039;
+	font-size: 40px;
+	font-weight: 700;
+	padding-top: 50px;
+}
+
+.formOverview .fieldset-label {
+	margin-top: 50px;
+}
+
+.formOverview input[type="time"] {
+	display: block;
+	margin-top: 20px;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	background-color: transparent;
+	font-weight: 700;
+	font-size: 30px;
+	color: #fff039;
+	padding: none;
+	font-family: 'proxima-nova', sans-serif;
+	height: 32px;
+}
+
+.formOverview input[type="text"] {
+	font-size: 30px;
+}
+
