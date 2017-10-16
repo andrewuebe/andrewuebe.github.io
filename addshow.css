@@ -77,6 +77,16 @@ textarea {
 	border: 2px solid rgba(0,0,0,0.2);
 }
 
+/* Next/Prev Buttons */
+
+#progressButtons {
+	position: relative;
+	display: block;
+	width: 360px;
+	margin: 0 auto;
+	margin-top: 200px;;
+}
+
 fieldset .next, .previous {
 	display: block;
 	color: white;
@@ -116,14 +126,6 @@ fieldset .next:focus, .pervious:focus {
 
 .previous:focus {
 	outline: none;
-}
-
-#progressButtons {
-	position: relative;
-	display: block;
-	width: 360px;
-	margin: 0 auto;
-	margin-top: 200px;;
 }
 
 /* Time Input */
@@ -324,9 +326,48 @@ input[type="time"]:focus {
 
 input[type="submit"] {
 	display: none;
+	color: white;
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: 8px;
+	border: 2px solid white;
+	text-decoration: none;
+	width: 170px;
+	text-align: center;
+	background-color: transparent;
+	text-transform: uppercase;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: 60px;
+	transition: 0.2s ease;
+}
+
+input[type="submit"]:hover {
+	display: block;
+	color: #2c2c2c;
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: 8px;
+	border: 2px solid white;
+	text-decoration: none;
+	width: 170px;
+	text-align: center;
+	background-color: white;
+	text-transform: uppercase;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: 60px;
 }
 
 .formOverview input[type="submit"] {
+	display: block;
+}
+
+footer {
+	display: none;
+}
+
+.formOverview footer {
 	display: block;
 }
 
