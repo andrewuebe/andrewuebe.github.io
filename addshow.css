@@ -69,10 +69,12 @@
 
 textarea {
 	height: 70px;
+	width: 100%;
 }
 
 .custom-text-area {
 	font-size: 15px;
+	border: 2px solid rgba(0,0,0,0.2);
 }
 
 fieldset .next, .previous {
@@ -318,5 +320,24 @@ input[type="time"]:focus {
 
 .formOverview input[type="text"] {
 	font-size: 30px;
+}
+
+input[type="submit"] {
+	display: none;
+}
+
+.formOverview input[type="submit"] {
+	display: block;
+}
+
+#thankyou_message {
+	font-family: "proxima-nova", sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	color: white;
+	display: block;
+	position: relative;
+	margin-top: 25%;
+	text-align: center;
 }
 
