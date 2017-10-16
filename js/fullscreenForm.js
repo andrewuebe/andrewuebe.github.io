@@ -10,7 +10,7 @@ $(".next").click(function(){
 	current_button = $(this);
 	
 	if(current_button.hasClass("lastButton")){
-		showOverview();
+		showOverview(current_fs);
 	}
 	else{
 		//show the next fieldset
@@ -39,7 +39,21 @@ $(".previous").click(function(){
 }
 )
 
-function showOverview() {
+function showOverview(current) {
+	current_fs.fadeTo(400, 0);
+	current_fs.hide();
 	$(".addShowContainer").addClass("formOverview");
+	
+	$("body").css("background-color", "#2c2c2c");
+	
+	var $fieldset = $(".addShowContainer").find('fieldset');
 	console.log("yay");
+	
+	var buttons = $fieldset.find('#progressButtons');
+	
+	buttons.hide();
+	
+	$fieldset.show();
+	$fieldset.fadeTo(400, 1);
+
 }
