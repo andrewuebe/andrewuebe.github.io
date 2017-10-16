@@ -1,4 +1,4 @@
-var current_fs, previous_fs;
+var current_fs, previous_fs, current_button;
 var left, opacity, cale;
 
 var questionNum;
@@ -7,10 +7,21 @@ $(".next").click(function(){
 	current_fs = ($(this).parent()).parent();
 	next_fs = ($(this).parent()).parent().next();
 	
+	current_button = $(this);
 	
-	//show the next fieldset
-	next_fs.show();
-	current_fs.hide();
+	if(current_button.hasClass("lastButton")){
+		showOverview();
+	}
+	else{
+		//show the next fieldset
+		
+		current_fs.fadeTo(400, 0);
+		current_fs.hide();
+		next_fs.show();
+		next_fs.css("opacity", "0");
+		next_fs.fadeTo(400, 1);
+	}
+
 }
 )
 
@@ -20,7 +31,15 @@ $(".previous").click(function(){
 
 	
 	//show the next fieldset
-	previous_fs.show();
+	current_fs.fadeTo(400, 0);
 	current_fs.hide();
+	previous_fs.show();
+	previous_fs.css("opacity", "0");
+	previous_fs.fadeTo(400, 1);
 }
 )
+
+function showOverview() {
+	$(".addShowContainer").addClass("formOverview");
+	console.log("yay");
+}
