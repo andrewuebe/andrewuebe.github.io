@@ -10,6 +10,7 @@
 /* Form Styles */
 
 #addShowForm {
+	display: block;
 	width: 75%;
 	margin: 0 auto;
 	margin-top: 100px;
@@ -19,9 +20,9 @@
 #addShowForm fieldset {
 	border: 0;
 	height: 100%;
-	box-sizing: border-box;
 	margin-top: 0px;
 	position: relative;
+	display: block;
 }
 
 #addShowForm fieldset:not(:first-of-type){
@@ -48,7 +49,7 @@
 
 .fieldset-text-input{
 	display: block;
-	margin: 0;
+	margin-top: 20px;
 	width: 100%;
 	border: none;
 	border-bottom: 2px solid rgba(0,0,0,0.2);
@@ -113,6 +114,123 @@ fieldset .next:focus, .pervious:focus {
 	width: 360px;
 	margin: 0 auto;
 	margin-top: 200px;;
+}
+
+/* Time Input */
+
+input[type="time"] {
+	display: block;
+	margin-top: 20px;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	background-color: transparent;
+	font-weight: 700;
+	font-size: 60px;
+	color: #fff039;
+	padding: none;
+	font-family: 'proxima-nova', sans-serif;
+	height: 72px;
+}
+
+/* Radio Inputs */
+
+.fieldset-radio-group {
+	display: absolute;
+	display: block;
+	height: 95px;
+}
+
+.fieldset-radio-group input[type="radio"] {
+	display: block;
+	margin: 30px auto 20px;
+	margin: 0 auto 20px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.fieldset-radio-group span {
+	float: left;
+	position: relative;
+	margin-right: 3%;
+	max-width: 78px;
+	height: 78px;
+	width: 30%;
+	text-align: center;
+	font-weight: 700;
+	font-size: 50%;
+	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+	margin-left: 20px;
+}
+
+.fieldset-radio-group span label {
+	color: rgba(250,250,250,0.4);
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+	display: block;
+	cursor: pointer;
+}
+
+.fieldset-radio-group label::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	background-position: 50% 0%;
+	background-size: 85%;
+	background-repeat: no-repeat;
+	content: '';
+	opacity: 0.5;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	margin-top: 20px;
+}
+
+.fieldset-radio-group label.radio-newyork::after {
+	background-image: url(images/nyc_radio.svg);
+}
+
+.fieldset-radio-group label.radio-chicago::after {
+	background-image: url(images/chi_radio.svg);
+}
+
+.fieldset-radio-group label.radio-sun::after {
+	background-image: url('images/sun.svg');
+}
+
+.fieldset-radio-group label.radio-mon::after {
+	background-image: url('images/mon.svg');
+}
+
+.fieldset-radio-group label.radio-tue::after {
+	background-image: url('images/tue.svg');
+}
+
+.fieldset-radio-group label.radio-wed::after {
+	background-image: url('images/wed.svg');
+}
+
+.fieldset-radio-group label.radio-thu::after {
+	background-image: url('images/thu.svg');
+}
+
+.fieldset-radio-group label.radio-fri::after {
+	background-image: url('images/fri.svg');
+}
+
+.fieldset-radio-group label.radio-sat::after {
+	background-image: url('images/sat.svg');
+}
+
+.fieldset-radio-group label:hover::after,
+.fieldset-radio-group input[type="radio"]:focus + label::after,
+.fieldset-radio-group[type="radio"]:checked + label::after {
+	opacity: 1;
 }
 
 

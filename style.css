@@ -14,7 +14,7 @@ body {
 	background-color: white;
 	box-sizing: inherit; 
 	margin: 0 auto;
-	font-family: "proxima-nova";
+	font-family: "proxima-nova", sans-serif;
 	height: 100%;
 	width: 100%;
 }
