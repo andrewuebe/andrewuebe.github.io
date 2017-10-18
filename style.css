@@ -512,8 +512,8 @@ ul.form-style {
 ul.form-style form li {
 	position: relative;
 	display: inline-block;
-	margin-left: calc( (100% - 360px) / 14);
-	margin-right: calc( (100% - 360px) / 14);
+	margin-left: calc( (100% - 365px) / 14);
+	margin-right: calc( (100% - 365px) / 14);
 	margin-top: 20px;
 }
 
