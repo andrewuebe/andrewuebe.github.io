@@ -157,6 +157,24 @@ var masterShows = [{
 
 var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+function dropdown_menu() {
+	
+	var ulField = document.getElementById("myselect");
+	var span = document.getElementById("currentCity");
+	var selStyle = document.getElementById("select-style");
+
+	if(ulField.style.display == 'block'){
+		ulField.style.display = "none";
+		span.className = "";
+		selStyle.className = "";
+	}
+	else {
+		ulField.style.display = "block";
+		span.className += "clicked";
+		selStyle.className += "clicked";
+	}
+}
+
 function change_myselect(sel) {
 		
 	var html = "";
@@ -279,21 +297,4 @@ function displayShowDetails(idNum){
 	
 	
 }
-
-document.getElementById("theform").addEventListener("submit", function(event){
-	event.preventDefault()
-	addNewShow(event)
-})
-
-
-function addNewShow(){
-	
-	var theForm = document.getElementById("theform");
-	var theMessage = document.getElementById("formComplete");
-	
-	
-	theForm.style.display = "none";
-	theMessage.style.display = "table-cell";
-}
-
 

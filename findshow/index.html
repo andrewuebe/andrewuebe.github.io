@@ -28,17 +28,16 @@
 		</div>
 		<div id="searchCentral">
 			<div id="topGradient">
-				<div id="currentCity">Choose a city:</div>
-				<div class="select-style">
-					<select id="myselect" onchange="change_myselect(this.value)" class="cs-select cs-skin-boxes">
-					<option value="choose a city:">Choose a city:</option>
-					<option value="CHI">Chicago</option>
-					<option value="NYC">New York City</option>
-					</select>
+				<div id="select-style" onclick="dropdown_menu()">
+					<span id="currentCity" class="">Select a city:</span>
+					<ul id="myselect" class="dropdown">
+					<li onclick="change_myselect('CHI')" value="CHI">&nbsp;&nbsp;Chicago</li>
+					<li onclick="change_myselect('NYC')" value="NYC">&nbsp;&nbsp;New York City</li>
+					</ul>
 				</div>
 				<ul class="form-style">
 					<form id="myForm" onkeyup="" onchange="">
-					<input type="text" id="myInput" placeholder="Search show names.." title="Type in a name">
+					<input type="text" id="myInput" placeholder="Filter show names" title="Type in a name">
 					<li><input type="checkbox" value="Sunday" checked> Sun</li>
 					<li><input type="checkbox" value="Monday" checked> Mon</li>
 					<li><input type="checkbox" value="Tuesday" checked> Tue</li>
