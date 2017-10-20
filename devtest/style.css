@@ -160,3 +160,17 @@ tr{
 tr:nth-child(odd){
     background-color: rgba(0,0,0,0.1);
 }
+
+/* Responsive Styles */
+
+
+/* iPhone 6 */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+	
+	h1{
+		font-size: 5.0em;
+	}
+	
+}
