@@ -181,9 +181,8 @@ tr:nth-child(odd){
 	
 	
 	#content h1{
-		font-size: 5.0em;
+		font-size: 4.3em;
 		line-height: 1.0em;
-		float: none;
 	}
 	
 	
@@ -198,15 +197,8 @@ tr:nth-child(odd){
 		padding-bottom: 10px;
 		height: 30px
 	}
-	
-	th + th {
-		border-bottom: none;
-		border-right: 1px solid rgba(0,0,0,0.1);
-	}
-	
-	th + th + th + th {
-		border: none;
-	}
+
+
 	
 	#sortArrow.down {
 		right: 20px;
@@ -218,7 +210,7 @@ tr:nth-child(odd){
 
 	th + th {
 		display: inline-block;
-		width: 33.22%;
+		width: 33.33333%;
 	}
 
 	td {
@@ -236,4 +228,13 @@ tr:nth-child(odd){
 		border-right: 1px solid rgba(0,0,0,0.1);
 	}
 	
+}
+
+@media all and (max-width: 400px) {
+	
+	#content h1{
+		font-size: 3.7em;
+		line-height: 
+	}
+		
 }
