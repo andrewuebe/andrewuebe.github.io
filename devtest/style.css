@@ -163,14 +163,30 @@ tr:nth-child(odd){
 
 /* Responsive Styles */
 
-
-/* iPhone 6 */
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) {
+@media all
+and (max-width: 667px) {
 	
-	h1{
+	#content h1{
 		font-size: 5.0em;
+		line-height: 1.0em;
+		float: none;
+	}
+	
+	
+	th {
+		display: none;
+	}
+	
+	td {
+		width: 100%;
+		display: inline-block;
+		padding-left: 0;
+		padding-right: 0;
+		border-right: none;
+	}
+	
+	td + td {
+		width: 33%;
 	}
 	
 }
