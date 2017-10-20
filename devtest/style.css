@@ -71,6 +71,10 @@ header #logo {
 
 /* Table */
 
+#sortInstructions{
+	display: none;
+}
+
 #donorTable {
   background: white;
   border-radius:3px;
@@ -165,6 +169,10 @@ tr:nth-child(odd){
 
 @media all
 and (max-width: 700px) {
+	
+	#sortInstructions {
+		
+	}
 	
 	#content h1{
 		font-size: 5.0em;
