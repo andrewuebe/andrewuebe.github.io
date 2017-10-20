@@ -254,5 +254,13 @@ tr:nth-child(odd){
 	th + th #sortArrow.up {
 		right: 10px;
 	}
+	
+	th + th + th + th #sortArrow.down {
+		right: 5px;
+	}
+	
+	th + th + th + th #sortArrow.up {
+		right: 5px;
+	}
 		
 }
