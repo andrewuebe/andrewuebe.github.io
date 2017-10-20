@@ -245,6 +245,14 @@ tr:nth-child(odd){
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
-}
+	}
+	
+	th + th #sortArrow.down {
+		right: 10px;
+	}
+	
+	th + th #sortArrow.up {
+		right: 10px;
+	}
 		
 }
