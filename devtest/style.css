@@ -71,7 +71,7 @@ header #logo {
 
 /* Table */
 
-#sortInstructions{
+#sortInstructions {
 	display: none;
 }
 
@@ -108,7 +108,6 @@ th #sortArrow {
 
 th.active {
 	background: #361a60;
-	padding-right: 19px;
 }
 
 #sortArrow.down {
@@ -116,6 +115,7 @@ th.active {
 	border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid white;
+    margin
 }
 
 #sortArrow.up {
@@ -136,7 +136,6 @@ th:hover, th:active {
 
 td {
 	color: #4e2a84;
-	width: 33%;
 	width: 33%;
 	padding: 25px;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -165,14 +164,21 @@ tr:nth-child(odd){
     background-color: rgba(0,0,0,0.1);
 }
 
+
 /* Responsive Styles */
 
-@media all
-and (max-width: 700px) {
+@media all and (max-width: 667px) {
 	
-	#sortInstructions {
-		
+	#sortInstructions{
+		font-family: "Poppins";
+		color: #4e2a84;
+		display: block;
+		width: 95%;
+		height: 30px;
+		margin: 0 auto;
+		text-align: center;
 	}
+	
 	
 	#content h1{
 		font-size: 5.0em;
@@ -182,19 +188,52 @@ and (max-width: 700px) {
 	
 	
 	th {
-		display: none;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		display: block;
+		border: 1px 1px 1px 0px solid black;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		height: 30px
 	}
 	
+	th + th {
+		border-bottom: none;
+		border-right: 1px solid rgba(0,0,0,0.1);
+	}
+	
+	th + th + th + th {
+		border: none;
+	}
+	
+	#sortArrow.down {
+		right: 20px;
+	}
+	
+	#sortArrow.up {
+	    right: 20px;
+	}
+
+	th + th {
+		display: inline-block;
+		width: 33.22%;
+	}
+
 	td {
 		width: 100%;
 		display: inline-block;
 		padding-left: 0;
 		padding-right: 0;
 		border-right: none;
+		font-size: 1.7em;
 	}
 	
 	td + td {
 		width: 33%;
+		margin-bottom: 10px;
+		border-right: 1px solid rgba(0,0,0,0.1);
 	}
 	
 }
