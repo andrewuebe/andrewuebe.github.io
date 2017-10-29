@@ -1,5 +1,5 @@
 // FOR 'DAY' KEY: 0 = Sunday, 1 = Monday, 2 = Tuesday ... 7 = Saturday
-
+/*
 var masterShows = [{
   "id": 1,
   "city":"CHI",
@@ -153,9 +153,14 @@ var masterShows = [{
   "notes": "pre-sign up on freemics.con or jimmypeoples.com. walkins welcome."
 }
 ]
+*/
 
+var masterShows;
+$.getJSON('https://micsearch-179721.firebaseio.com/showlist.json?auth=T1QvrlISctha0CLoQ9SRWoRS3VmEE7AKVpf2GCr9', function(json) {
+	masterShows = json;
+});
 
-var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var weekday = ["undefined", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function dropdown_menu() {
 	
@@ -297,4 +302,3 @@ function displayShowDetails(idNum){
 	
 	
 }
-
