@@ -220,7 +220,7 @@ function change_myselect(sel) {
 		
 	}
 	
-	document.getElementById("myTable").innerHTML = "<table cellspacing-left='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th><th>Genre</th></tr>" + html;
+	document.getElementById("myTable").innerHTML = "<table cellspacing-left='0' cellspacing-top='0'> <tr><th>Day</th><th>Name</th><th>Time</th><th>Address</th><th>Genre</th></tr>" + html;
 
 }
 
