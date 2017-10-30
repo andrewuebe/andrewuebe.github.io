@@ -225,6 +225,7 @@ function change_myselect(sel) {
 }
 
 
+
 document.getElementById("myForm").addEventListener("change", function(event){
 	event.preventDefault()
 	myFunction(event)
@@ -233,6 +234,22 @@ document.getElementById("myForm").addEventListener("change", function(event){
 document.getElementById("myForm").addEventListener("keyup", function(event){
 	event.preventDefault()
 	myFunction(event)
+})
+
+
+$("#lilburger").click(function(){
+	
+	if($("#lilburger").hasClass("activeBurger")){
+		$("#lilburger").removeClass("activeBurger");
+		$("header").removeClass("activeBurger");
+		$("ul").removeClass("activeBurger");
+	}
+	else{
+		$("#lilburger").addClass("activeBurger");
+		$("header").addClass("activeBurger");
+		$("ul").addClass("activeBurger");
+	}
+	
 })
 
 function myFunction(e) {

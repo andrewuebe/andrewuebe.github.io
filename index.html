@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
+		
+		<meta name="description" content="MicSearch(beta) finds open mic shows in Chicago and New York City."
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		<script src="https://use.typekit.net/lgl0avq.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -11,7 +16,8 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="theme-color" content="#ffffff">	</head>
+		
+		
 	<body>
 		<div id="navbar">
 			<a href="../" class="logoimg">
@@ -23,6 +29,8 @@
 				<li><a href="../findshow/">FIND A SHOW</a></li> 
 				<li><a href="../addshow/">ADD A SHOW</a></li>
 			</ul>
+			<div id="lilburger">
+			</div>
 		</div>
 		<header class="landing">
 			<div class="biggercontainer">
@@ -45,7 +53,7 @@ and makes getting to the right show simple.</div>
 			<div class="topOfSection">How it works</div>
 			<div class="item" id="howImage" data-aos="zoom-in"></div>
 			<div id="howTextBoxContainer" data-aos="zoom-in">
-				<div class="howTextBox" style="line-height: 40px;">First, customize your search</div>
+				<div class="howTextBox">First, customize your search</div>
 				<div class="howTextBox">Next, peruse the sorted<br>list of shows</div>
 				<div class="howTextBox">Then click on a show<br>for more details</div>
 			</div>
@@ -58,11 +66,11 @@ and makes getting to the right show simple.</div>
 		<footer>
 			<div id="footerText">MicSearch was designed and developed by <a href="https://www.auebe.com">Andrew Uebelein</a>, a Chicago based Web/Visual Designer, Animator, Video Editor and Comedian.<br>This site is a work in progress, and he promises to keep working! :-)</div>
 		</footer>
+		<form id="myForm">
+		</form>
 		
-		
-		
-		<script src="../js/table.js"></script>
 		<script src="jquery-3.2.1.min.js"></script>
+		<script src="js/table.js"></script>
 		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 		<script>
 			AOS.init({
