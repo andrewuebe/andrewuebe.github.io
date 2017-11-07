@@ -912,7 +912,10 @@ footer a {
 	
 }
 
-
+	#searchCentral {
+		padding-top: 300px
+	}
+	
 }
 
 @media all and (max-width: 500px) {
