@@ -39,6 +39,40 @@ body {
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
+button#chris {
+	background-color: rgba(250, 250, 250, 0.2);
+	padding: 20px;
+	border: 6px solid white;
+	font-size: 26px;
+	font-family: "Alegreya", serif;
+	font-weight: 900;
+	color: white;
+	transition: 0.3s ease;
+	margin-top: 2rem;
+}
+
+button#chris:hover {
+	background-color: white;
+	color: black;
+	transition: 0.3 ease;
+}
+
+button#chris:active {
+	outline:0;
+}
+
+button#chris:focus {
+	outline:0;
+}
+
+.chrisHead img{
+	max-width: 400px;
+}
+
+.chrisHead img{
+	position: relative;
+	width: 100%;
+}
 
 .myNav{
 	z-index: 999;
@@ -392,6 +426,35 @@ a.fun:focus {
     -webkit-transform: rotateX(75deg) rotateZ(1turn);
   }
 }
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+
+@keyframes colorchangetext
+    {
+      0%   {color: #ff5555;}
+      25%  {color: #fff480;}
+      50%  {color: #57b8ff;}
+      75%  {color: #b3da80;}
+      100% {color: #ff5555;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {color: #ff5555;}
+      25%  {color: #fff480;}
+      50%  {color: #57b8ff;}
+      75%  {color: #b3da80;}
+      100% {color: #ff5555;}
+    }
+
 
 @keyframes colorchange
     {
