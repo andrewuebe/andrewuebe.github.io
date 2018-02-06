@@ -500,6 +500,12 @@ a.fun:focus {
 	margin: 0 auto;
 		
 	}
+	
+	.chrisHead{
+	position: relative;
+	max-width: 200px;
+	margin: 0 auto;
+}
 }
 
 @media all and (max-width: 543px){
