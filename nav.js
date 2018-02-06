@@ -1,83 +1,119 @@
-NUM_CONFETTI = 50
-COLORS = [[254,244,154], [192,215,120], [213,130,139], [244,92,68], [149,172,217]]
-PI_2 = 2*Math.PI
+(function() {
+  var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
 
+  NUM_CONFETTI = 50;
 
-canvas = document.getElementById "world"
-context = canvas.getContext "2d"
-window.w = 0
-window.h = 0
+  COLORS = [[254, 244, 154], [192, 215, 120], [213, 130, 139], [244, 92, 68], [149, 172, 217]];
 
-resizeWindow = ->
-  window.w = canvas.width = window.innerWidth
-  window.h = canvas.height = window.innerHeight
+  PI_2 = 2 * Math.PI;
 
-window.addEventListener 'resize', resizeWindow, false
-  
-window.onload = -> setTimeout resizeWindow, 0
+  canvas = document.getElementById("world");
 
-range = (a,b) -> (b-a)*Math.random() + a
+  context = canvas.getContext("2d");
 
-drawCircle = (x,y,r,style) ->
-  context.beginPath()
-  context.arc(x,y,r,0,PI_2,false)
-  context.fillStyle = style
-  context.fill()
+  window.w = 0;
 
-xpos = 0.5
+  window.h = 0;
 
-document.onmousemove = (e) ->
-  xpos = e.pageX/w
+  resizeWindow = function() {
+    window.w = canvas.width = window.innerWidth;
+    return window.h = canvas.height = window.innerHeight;
+  };
 
-window.requestAnimationFrame = do ->
-  window.requestAnimationFrame       ||
-  window.webkitRequestAnimationFrame ||
-  window.mozRequestAnimationFrame    ||
-  window.oRequestAnimationFrame      ||
-  window.msRequestAnimationFrame     ||
-  (callback) -> window.setTimeout(callback, 1000 / 60)
+  window.addEventListener('resize', resizeWindow, false);
 
+  window.onload = function() {
+    return setTimeout(resizeWindow, 0);
+  };
 
-class Confetti
+  range = function(a, b) {
+    return (b - a) * Math.random() + a;
+  };
 
-  constructor: ->
-    @style = COLORS[~~range(0,5)]
-    @rgb = "rgba(#{@style[0]},#{@style[1]},#{@style[2]}"
-    @r = ~~range(2,6)
-    @r2 = 2*@r
-    @replace()
+  drawCircle = function(x, y, r, style) {
+    context.beginPath();
+    context.arc(x, y, r, 0, PI_2, false);
+    context.fillStyle = style;
+    return context.fill();
+  };
 
-  replace: ->
-    @opacity = 0
-    @dop = 0.03*range(1,4)
-    @x = range(-@r2,w-@r2)
-    @y = range(-20,h-@r2)
-    @xmax = w-@r
-    @ymax = h-@r
-    @vx = range(0,2)+8*xpos-5
-    @vy = 0.7*@r+range(-1,1)
+  xpos = 0.5;
 
-  draw: ->
-    @x += @vx
-    @y += @vy
-    @opacity += @dop
-    if @opacity > 1
-      @opacity = 1
-      @dop *= -1
-    @replace() if @opacity < 0 or @y > @ymax
-    if !(0 < @x < @xmax)
-      @x = (@x + @xmax) % @xmax
-    drawCircle(~~@x,~~@y,@r,"#{@rgb},#{@opacity})")
+  document.onmousemove = function(e) {
+    return xpos = e.pageX / w;
+  };
 
+  window.requestAnimationFrame = (function() {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+      return window.setTimeout(callback, 1000 / 60);
+    };
+  })();
 
-confetti = (new Confetti for i in [1..NUM_CONFETTI])
+  Confetti = class Confetti {
+    constructor() {
+      this.style = COLORS[~~range(0, 5)];
+      this.rgb = `rgba(${this.style[0]},${this.style[1]},${this.style[2]}`;
+      this.r = ~~range(2, 6);
+      this.r2 = 2 * this.r;
+      this.replace();
+    }
 
-window.step = ->
-  requestAnimationFrame(step)
-  context.clearRect(0,0,w,h)
-  c.draw() for c in confetti
+    replace() {
+      this.opacity = 0;
+      this.dop = 0.03 * range(1, 4);
+      this.x = range(-this.r2, w - this.r2);
+      this.y = range(-20, h - this.r2);
+      this.xmax = w - this.r;
+      this.ymax = h - this.r;
+      this.vx = range(0, 2) + 8 * xpos - 5;
+      return this.vy = 0.7 * this.r + range(-1, 1);
+    }
 
-step()
+    draw() {
+      var ref;
+      this.x += this.vx;
+      this.y += this.vy;
+      this.opacity += this.dop;
+      if (this.opacity > 1) {
+        this.opacity = 1;
+        this.dop *= -1;
+      }
+      if (this.opacity < 0 || this.y > this.ymax) {
+        this.replace();
+      }
+      if (!((0 < (ref = this.x) && ref < this.xmax))) {
+        this.x = (this.x + this.xmax) % this.xmax;
+      }
+      return drawCircle(~~this.x, ~~this.y, this.r, `${this.rgb},${this.opacity})`);
+    }
+
+  };
+
+  confetti = (function() {
+    var j, ref, results;
+    results = [];
+    for (i = j = 1, ref = NUM_CONFETTI; 1 <= ref ? j <= ref : j >= ref; i = 1 <= ref ? ++j : --j) {
+      results.push(new Confetti);
+    }
+    return results;
+  })();
+
+  window.step = function() {
+    var c, j, len, results;
+    requestAnimationFrame(step);
+    context.clearRect(0, 0, w, h);
+    results = [];
+    for (j = 0, len = confetti.length; j < len; j++) {
+      c = confetti[j];
+      results.push(c.draw());
+    }
+    return results;
+  };
+
+  step();
+
+}).call(this);
+
 var menu = $("#myNav");
 var crystal = $(".container");
 
