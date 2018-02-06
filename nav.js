@@ -17,7 +17,7 @@ function closeNav() {
 
 function ian() {
 	
-	crystal.html() = "";
-	crystal.html() += "<div class='ian'></div>";
+	crystal.innerhtml.innerHTML = "";
+	crystal.innerHTML += "<div class='ian'></div>";
 	
 }
