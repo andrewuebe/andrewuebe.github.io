@@ -16,6 +16,11 @@ body {
   -webkit-perspective: 800px;
 }
 
+html, body {
+	overflow: hidden;
+  background: #111;
+}
+
 
 .liink {
 	padding: 0px;
