@@ -293,7 +293,7 @@ body {
 }
 
 /* The navigation links inside the overlay */
-.overlay a {
+.overlay a.closeButton {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
@@ -302,11 +302,24 @@ body {
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
-.overlay a.love {
-	font-size:26px;
-	padding: 0;
+.overlay a {
+	color: white;
+	text-decoration: none;
 }
 
+a.fun {
+	display: block;
+	max-width: 200px;
+	text-align: center;
+	padding: 20px;
+	margin: 0 auto;
+	background: white;
+	opacity: 0.05;
+}
+
+a.fun:focus {
+	opcaity: 1;
+}
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
@@ -333,11 +346,10 @@ body {
 }
 
 .ian {
-	position: absolute;
-	top: 22.5vh;
-	left: 22.5vh;
-	height: 15vh;
-	width: 15vh;
+	position: relative;
+	height: 400px;
+	max-width: 400px;
+	margin: 0 auto;
 	background-image: url('/ian.gif');
 }
 
