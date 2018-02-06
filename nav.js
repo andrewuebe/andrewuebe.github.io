@@ -14,3 +14,10 @@ function closeNav() {
 	crystal.fadeTo("slow", 1);
 	
 } 
+
+function ian() {
+	
+	crystal.html() = "";
+	crystal.html() += "<div class='ian'></div>";
+	
+}
