@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
   background: white;
@@ -16,7 +16,7 @@ body {
   -webkit-perspective: 800px;
 }
 
-<<<<<<< Updated upstream
+
 .liink {
 	padding: 0px;
     text-decoration: none;
@@ -40,8 +40,7 @@ body {
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
-=======
->>>>>>> Stashed changes
+
 .myNav{
 	z-index: 999;
 }
@@ -237,13 +236,10 @@ body {
     left: 0;
     top: 0;
     opacity: 0;
-<<<<<<< Updated upstream
     animation: colorchange 59s infinite;
     -webkit-animation: colorchange 59s infinite;
-=======
     animation: colorchange 59s;
     -webkit-animation: colorchange 59s;
->>>>>>> Stashed changes
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -251,7 +247,7 @@ body {
 /* Position the content inside the overlay */
 .overlay-content {
     position: relative;
-    top: 25%; /* 25% from the top */
+    top: 20%; /* 25% from the top */
     width: 100%; /* 100% width */
     text-align: center; /* Centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -264,11 +260,8 @@ body {
     color: white;
     font-family: "Roboto";
     font-weight: 700;
-<<<<<<< Updated upstream
     width: 632px;
     margin: 0 auto;
-=======
->>>>>>> Stashed changes
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
 }
@@ -278,14 +271,11 @@ body {
     text-decoration: none;
     font-size: 26px;
     color: white;
-    font-family: "Old Standard TT";
+    font-family: "Roboto";
     font-style: italic;
     display: block; /* Display block instead of inline */
-<<<<<<< Updated upstream
-=======
     width: 300px;
     margin: 0 auto;
->>>>>>> Stashed changes
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
@@ -294,14 +284,11 @@ body {
     text-decoration: none;
     font-size: 26px;
     color: white;
-    font-family: "Old Standard TT";
+    font-family: "Roboto";
     font-style: italic;
     display: block; /* Display block instead of inline */
-<<<<<<< Updated upstream
-=======
     width: 300px;
     margin: 0 auto;
->>>>>>> Stashed changes
     transition: 0.3s; /* Transition effects on hover (color) */
 }
 
@@ -329,15 +316,17 @@ body {
     font-size: 60px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
+.explanation {
+	font-family: "Alegreya", serif;
+	font-weight: 900;
+	color: white;
+	font-size: 70px;
+	display: block;
+	max-width: 700px;
+	margin: 0 auto;
+	
 }
+
 
 @keyframes float {
   from {
@@ -393,32 +382,48 @@ body {
       50%  {background: #57b8ff;}
       75%  {background: #b3da80;}
       100% {background: #ff5555;}
-<<<<<<< Updated upstream
     }
- @media (max-width: 650px) {
-	 .overlay p {
-		 width: 100%;
-	 }
-}
- @media screen and (max-device-width: 480px) and (orientation: portrait){
+    
+@media all and (max-width: 630px){
+	
 	.overlay-content {
-		top: 10%;
-		margin-top: 5px;
-	 }
-	 
-	 .overlay p {
-		font-size: 150px;
-		width: 100%;
-	 }
-	 
-	 .overlay p-top {
-		font-size: 60px;
-	 }
-	 
-	 .overlay p-bot {
-		font-size: 50px;
-	 }
- }
-=======
+    position: relative;
+    top: 25%; /* 25% from the top */
     }
->>>>>>> Stashed changes
+	.explanation {
+	font-family: "Alegreya", serif;
+	font-weight: 900;
+	color: white;
+	font-size: 55px;
+	display: block;
+	max-width: 700px;
+	margin: 0 auto;
+		
+	}
+}
+
+@media all and (max-width: 543px){
+	
+	.overlay-content {
+    position: relative;
+    top: 20%; /* 25% from the top */
+    }
+}
+
+@media all and (max-width: 400px){
+	
+	.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    }
+	.explanation {
+	font-family: "Alegreya", serif;
+	font-weight: 900;
+	color: white;
+	font-size: 35px;
+	display: block;
+	max-width: 700px;
+	margin: 0 auto;
+		
+	}
+}
