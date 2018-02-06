@@ -13,4 +13,4 @@ function closeNav() {
 	menu.fadeTo("slow", 0);
 	crystal.fadeTo("slow", 1);
 	
-}
+} 
