@@ -48,11 +48,12 @@ html, body {
 
 .myNav{
 	z-index: 999;
+	position: absolute;
 }
 
 
 .container {
-  position: relative;
+  position: absolute;
   z-index: 0;
   height: 60vh;
   width: 60vh;
@@ -337,6 +338,7 @@ a.fun:focus {
     top: 20px;
     right: 45px;
     font-size: 60px;
+	z-index: 999;
 }
 
 .explanation {
