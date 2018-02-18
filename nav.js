@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 taskInput.addEventListener("keypress", keyPressed);  // bind to taskInput, not addButton
 
 function keyPressed(k) {
@@ -7,10 +6,6 @@ function keyPressed(k) {
   return false;               // no propagation or default
 }
 
-
-
-=======
->>>>>>> origin/master
 
 var menu = $("#myNav");
 var crystal = $(".container");
