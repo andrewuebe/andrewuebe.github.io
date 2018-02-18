@@ -65,8 +65,10 @@ button#chris:focus {
 	outline:0;
 }
 
-.chrisHead img{
+.chrisHead{
+	position: relative;
 	max-width: 400px;
+	margin: 0 auto;
 }
 
 .chrisHead img{
@@ -355,22 +357,6 @@ a.fun:focus {
 	opcaity: 1;
 }
 
-.overlay input {
-	background-color: rgba(250,250,250,0.1);
-	border: none;
-	max-width: 100px;
-	padding: 10px;
-	font-family: "Roboto";
-	font-size: 16px;
-	color: rgba(250,250,250,0.4);
-	text-align: center;
-}
-
-.overlay input:focus {
-	outline: none;
-	color: rgba(250,250,250,0.7);
-}
-
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
@@ -451,6 +437,14 @@ a.fun:focus {
 .pulse {
   animation-name: pulse;
   animation-duration: 1s;
+  animation: pulse 0.5s linear infinite;
+  -webkit-animation: pulse 0.5s linear infinite;
+}
+
+.chris_says {
+	text-align: center;
+	font-size: 40px;
+	font-family: "Roboto";
 }
 
 @keyframes colorchangetext
@@ -506,6 +500,12 @@ a.fun:focus {
 	margin: 0 auto;
 		
 	}
+	
+	.chrisHead{
+	position: relative;
+	max-width: 200px;
+	margin: 0 auto;
+}
 }
 
 @media all and (max-width: 543px){
