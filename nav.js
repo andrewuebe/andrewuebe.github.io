@@ -1,3 +1,14 @@
+taskInput.addEventListener("keypress", keyPressed);  // bind to taskInput, not addButton
+
+function keyPressed(k) {
+  if (k.code == 'Enter')      // only if the key is "Enter"...
+    ian()               // ...add a new task (using same handler as the button)
+  return false;               // no propagation or default
+}
+
+
+
+
 var menu = $("#myNav");
 var crystal = $(".container");
 
@@ -20,6 +31,7 @@ function closeNav() {
 } 
 
 function ian() {
+	
 	console.log("got here");
 	crystal.html(" ");
 	crystal.html("<div class='ian'></div>");
