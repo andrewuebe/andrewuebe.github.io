@@ -1,50 +1,38 @@
-<html>
-	<head>
-		<link href="main.css" type="text/css" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Mana Crystal :-)</title>
-		<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAmVSKAN651wArlLIAiVKAAMuzyAB6PGwA8+3yANCwyABQIUYA1J7JAKNnlwB0OmoA2bbQAMagvADOoMQAQDJJAOPA3QBqlKgAQCk5ANKcxwBnPF0AbzhoAMSbugCTVoYAUilJAFtIXQByOGgA3bzQABhVhgC3eqwAkmeIAEgvQQCiXZMAw5O4AMulvwDft9YAVC9JAHOWqwCmjaEAklSEALV4qgCHWnwAZjxeAGg8XgDOmMMAz6bFAM+bwwAogqUAVyVNANm+1ACsgKUApHmYAAMKKQC7jbIA4LzaAFUmSwCmbJwAY4ygAKt2oQBRL0sAtHmpACV3nACuh6MAbzplAJ+CmQCmkKMAYzlYAEwmRACIXX4AdEdqAFAiRwBFKD8Ab0ZlANjF0wCQV48Aj0aFAGMrXwDl2uIAWC9MAKJmlgCEU3oAtH+qAIJWegCLWn8AuHutAGk/YQBuOGQA0ZvGAEYoQAAtRlAAPjRIAF5FWQBBJDsAs32oAE4vRQBaKFAAkWaHAIJXeABCKjsAbDJlAIRXeABIIz4AKkpWAAQTLABiLVsAtHepAGE4VQBmO10ARSE8AEIkPACISnwAXDNTAE1/jwAiZIIAIktlALGRqwD/0PcARSo8AItagQC8hrEA28rYAIlZhABukaYAu4mxANXJ0wB8Q3AApWubABlVhAAni6oAqW6bAFAuSgBEd4YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABahDoSJntxZwAAAAAAAAAAc4EwHYA+A3IAAAAAAAAAAAA1EFwaW2gAAAAAAAAAAAATQSMcMgVCYwAAAAAAAAAgNC4CETckDT92AAAAAABOZTYPClgULS8OKn0AAAAAX1R8eGpVHik9Ih8lAAAAACxRXoIIOSF/UFJhVgAAAABsRgsoAW8YFzM7YisAAAAAg0MEfhsMd3kHdEk8AAAAAABwQAYWS0UnSlNrAAAAAAAAXRlkTHVXFXpPSAAAAAAAAABuOE1pRGAxWQAAAAAAAAAAAABtRwlmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AADwDwAA8A8AAPgfAADwDwAA4AcAAMADAADAAwAAwAMAAMADAADAAwAA4AcAAOAHAADwDwAA/D8AAP//AAA=" rel="icon" type="image/x-icon" />
-	</head>
-
-	<body>
-		
-<div class="container" onclick="openMenu()">
-  <div class="crystal">
-    <div class="side top1">
-      <div class="blur"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cudi Meditation</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/cudi-orb.js"></script>
+    <script src="https://kit.fontawesome.com/4caac42ae0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="app-header">
+        <div class="app-title">
+          Cudi Meditation
+          <div class="app-title__shadow">Cudi Meditation</div>
+          <div class="app-title__shadow">Cudi Meditation</div>
+          <div class="app-title__shadow">Cudi Meditation</div>
+        </div>
+      </div>
+      <div class="meditation-wrapper">
+        <div class="meditation-orb off" onclick="play()">
+          <div class="meditation-info">
+            <div class="breath-type">Loading...</div>
+            <div class="timer"><i class="fas fa-spinner"></i></div>
+            <div class="lyric" style="display: none;"></div>
+            <div id="length"></div>
+            <div id="source"></div>
+            <div id="status"></div>
+            <div id="currentTime"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="side right1">
-      <div class="blur"></div>
-    </div>
-    <div class="side bottom1">
-      <div class="blur"></div>
-    </div>
-    <div class="side left1">
-      <div class="blur"></div>
-    </div>
-    <div class="side top2"></div>
-    <div class="side right2"></div>
-    <div class="side bottom2"></div>
-    <div class="side left2"></div>
-  </div>
-</div>
-
-	<!-- The overlay -->
-		<div id="myNav" class="overlay" style="opacity: 0;">
-		
-		  <!-- Button to close the overlay navigation -->
-		  <a href="javascript:void(0)" class="closebtn closeButton" onclick="closeNav()">&times;</a>
-		
-		  <!-- Overlay content -->
-		  <div class="overlay-content">
-			  <p-top>Come share your art at Mana Crystal:</p-top>
-		    <div class="explanation">Every Wednesday night, In Wiecking Basement,<br> @ 8:30.</div>
-		    <p-bot>No judgement, no bullshit, lots of love.</p-bot>
-			<a href="#" class="fun" onclick="ian()">surprise!</a>
-
-		  </div>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="nav.js"></script>
-	</body>
+    <audio id="audio1" src="./audio/cudi-meditation-hum_1.ogg"></audio>
+  </body>
 </html>
