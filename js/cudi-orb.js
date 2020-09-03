@@ -1,12 +1,13 @@
 $(document).ready(function () {
+  var audioElement;
   $(".app-container").on("click", ".load-meditation", function () {
     $(".load-meditation").hide();
     $(".meditation-wrapper").append(
       '<div class="meditation-orb off" onclick="play()"> <div class="meditation-info"> <div class="breath-type">Loading...</div> <div class="timer"><i class="fas fa-spinner"></i></div> <div class="lyric" style="display: none;"></div> <div id="length"></div> <div id="source"></div> <div id="status"></div> <div id="currentTime"></div> </div> </div>'
     );
-    var audioElement = document.createElement("audio");
-    audioElement.setAttribute("src", "./audio/cudi-meditation-hum_1.ogg");
-
+    audioElement = document.getElementById('player');
+    audioElement.src = "./audio/cudi-meditation-hum_1.ogg"
+    console.log("tahaha");
     var breathInLength = 4;
     var breathOutLength = 5.7;
     var breathCountArray = [0];
