@@ -81,6 +81,29 @@ body {
   z-index: -3;
 }
 
+/* Load Meditation */
+
+.load-meditation {
+  display: block;
+  padding: 2rem;
+  background: rgb(52, 20, 103);
+  background: linear-gradient(
+    160deg,
+    rgba(52, 20, 103, 1) 0%,
+    rgba(168, 19, 130, 1) 43%,
+    rgba(226, 102, 30, 1) 100%
+  );
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px rgba(253, 253, 253, 0.0);
+}
+
+.load-meditation:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px rgba(253, 253, 253, 0.2);
+}
+
 /* Meditation Component */
 
 .meditation-wrapper {
