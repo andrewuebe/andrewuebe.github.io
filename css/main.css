@@ -123,6 +123,7 @@ body {
   background-color: rgba(226, 102, 30, 0.9);
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .meditation-orb::after {
